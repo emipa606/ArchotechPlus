@@ -10,5 +10,4 @@
   <!--Used by the Resurrection Mist-->
   <ArchotechPlusSuccessfulResurrection>{PAWN_labelShort} has been resurrected by {PAWN_possessive} archotech regenerator!</ArchotechPlusSuccessfulResurrection>
   <ArchotechPlusFailedResurrection>{PAWN_labelShort}'s body has been too damaged for {PAWN_possessive} regenerator to bring {PAWN_objective} back to life!</ArchotechPlusFailedResurrection>
-
 </LanguageData>

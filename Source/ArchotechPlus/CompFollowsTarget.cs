@@ -9,7 +9,11 @@ namespace ArchotechPlus
 
         public override void CompTick()
         {
-            if (Target == null) return;
+            if (Target == null)
+            {
+                return;
+            }
+
             parent.Position = Target.PositionHeld;
         }
     }

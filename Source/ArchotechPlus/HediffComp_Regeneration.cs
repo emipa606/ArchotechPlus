@@ -13,7 +13,7 @@ namespace ArchotechPlus
 
         private IntRange _healingCooldownRange = ArchotechPlusSettings.HealingRange;
 
-        private static long TargetAgeInTicks => ArchotechPlusSettings.TargetAge * 3600000L + 1800000L;
+        private static long TargetAgeInTicks => (ArchotechPlusSettings.TargetAge * 3600000L) + 1800000L;
 
         private int _ticks;
         private int _ticksFullCharge;
@@ -61,7 +61,10 @@ namespace ArchotechPlus
                     return;
                 }
             }
-            ReduceAge();
+            if(ArchotechPlusSettings.RegeneratorDeAge)
+            {
+                ReduceAge();
+            }
         }
         private void ChargeRegenerator()
         {
@@ -84,7 +87,11 @@ namespace ArchotechPlus
         }
         private bool UsableHealingCharge()
         {
-            if (_healingCharges <= 0) return false;
+            if (_healingCharges <= 0)
+            {
+                return false;
+            }
+
             _healingCharges--;
             return true;
         }
@@ -120,10 +127,18 @@ namespace ArchotechPlus
         }
         private bool TryRestoreMissingPart()
         {
-            if (_bodyPartRegenerationTarget == null) return false;
+            if (_bodyPartRegenerationTarget == null)
+            {
+                return false;
+            }
+
             Pawn.health.RestorePart(_bodyPartRegenerationTarget);
             Pawn.health.AddHediff(RegenProgress, _bodyPartRegenerationTarget);
-            if (!PawnUtility.ShouldSendNotificationAbout(Pawn)) return true;
+            if (!PawnUtility.ShouldSendNotificationAbout(Pawn))
+            {
+                return true;
+            }
+
             Messages.Message(
                 "ArchotechPlusPartRegenerated".Translate((NamedArgument) parent.LabelCap,
                     (NamedArgument) Pawn.LabelShort, (NamedArgument) _bodyPartRegenerationTarget.Label, Pawn.Named("PAWN")), Pawn,
@@ -132,18 +147,31 @@ namespace ArchotechPlus
         }
         private bool TryHealRandomPermanentWound()
         {
-            if (_woundRegenerationTarget == null) return false;
+            if (_woundRegenerationTarget == null)
+            {
+                return false;
+            }
+
             _woundRegenerationTarget.Severity = 0.0f;
-            if (!PawnUtility.ShouldSendNotificationAbout(Pawn)) return true;
+            if (!PawnUtility.ShouldSendNotificationAbout(Pawn))
+            {
+                return true;
+            }
+
             Messages.Message(
                 "ArchotechPlusMessagePermanentWoundHealed".Translate((NamedArgument) parent.LabelCap, 
                     (NamedArgument) Pawn.LabelShort, (NamedArgument) _woundRegenerationTarget.Label,
                     Pawn.Named("PAWN")), Pawn, MessageTypeDefOf.PositiveEvent);
             return true;
         }
+
         private void ReduceAge()
         {
-            if (Pawn.ageTracker.AgeBiologicalTicks < TargetAgeInTicks) return;
+            if (Pawn.ageTracker.AgeBiologicalTicks < TargetAgeInTicks)
+            {
+                return;
+            }
+
             Pawn.ageTracker.AgeBiologicalTicks -= HourTickInterval * AgeMultiplier;
         }
 
@@ -172,7 +200,11 @@ namespace ArchotechPlus
         {
             --_resurrectionCharges;
             _ticks = 0;
-            if (!PawnUtility.ShouldSendNotificationAbout(Pawn)) return;
+            if (!PawnUtility.ShouldSendNotificationAbout(Pawn))
+            {
+                return;
+            }
+
             Messages.Message(
                 "ArchotechPlusResurrectionChargeSpent".Translate(
                     (NamedArgument) parent.LabelCap,
@@ -205,17 +237,26 @@ namespace ArchotechPlus
         private string CompTipStringBuilder()
         {
             var tipBuilder = new StringBuilder();
-            if (parent.Severity > 2 && _resurrectorEnabled) 
+            if (parent.Severity > 2 && _resurrectorEnabled)
+            {
                 tipBuilder.AppendLine("Resurrector " + (_resurrectionCharges > 0 ? "charged" + "(" + _resurrectionCharges + "x)" : "not charged"));
+            }
+
             tipBuilder.AppendLine("Healer " + (_healingCharges > 0 ? "charged" + "(" + _healingCharges + "x)" : "not charged"));
             if (_bodyPartRegenerationTarget != null)
+            {
                 tipBuilder.AppendLine("Injury targeted: " + _bodyPartRegenerationTarget.LabelCap);
+            }
             else if (_woundRegenerationTarget != null)
             {
                 tipBuilder.AppendLine("Injury targeted: " + _woundRegenerationTarget.LabelCap + "(" +
                                       _woundRegenerationTarget.Part.LabelCap + ")");
             }
-            if (ResurrectorCanCharge() || HealerCanCharge())tipBuilder.Append(PercentageCharged.ToStringPercent() + " charged");
+            if (ResurrectorCanCharge() || HealerCanCharge())
+            {
+                tipBuilder.Append(PercentageCharged.ToStringPercent() + " charged");
+            }
+
             return tipBuilder.ToString();
         }
         

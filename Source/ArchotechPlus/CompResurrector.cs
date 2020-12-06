@@ -30,7 +30,11 @@ namespace ArchotechPlus
         public override void CompTick()
         {
             _ticksToResurrection--;
-            if (_ticksToResurrection > 0) return;
+            if (_ticksToResurrection > 0)
+            {
+                return;
+            }
+
             if (ResurrectionConditionsMet() && CorpseRemovedFromContainers())
             {
                 MessageWasResurrectionSuccessful(true);
@@ -53,14 +57,22 @@ namespace ArchotechPlus
                 var container = (Building_Casket) Corpse.StoringThing();
                 container.EjectContents();
             }
-            if (!CorpseIsInContainer) return true;
+            if (!CorpseIsInContainer)
+            {
+                return true;
+            }
+
             Debug.Log("Error: Corpse is in miscellaneous that could not be processed container.");
             return false;
         }
         
         private bool ResurrectionConditionsMet()
         {
-            if (!Corpse.DestroyedOrNull() && Corpse.InnerPawn.health.hediffSet.HasHead) return true;
+            if (!Corpse.DestroyedOrNull() && Corpse.InnerPawn.health.hediffSet.HasHead)
+            {
+                return true;
+            }
+
             MessageWasResurrectionSuccessful(false);
             return false;
         }
