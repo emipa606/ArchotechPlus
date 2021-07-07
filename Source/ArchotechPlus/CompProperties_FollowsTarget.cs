@@ -6,8 +6,7 @@ namespace ArchotechPlus
     {
         public CompProperties_FollowsTarget()
         {
-            compClass = typeof (CompFollowsTarget);
+            compClass = typeof(CompFollowsTarget);
         }
-        
     }
 }

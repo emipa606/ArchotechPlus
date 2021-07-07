@@ -6,7 +6,7 @@ namespace ArchotechPlus
     {
         public HediffCompProperties_Regeneration()
         {
-            compClass = typeof (HediffComp_Regeneration);
+            compClass = typeof(HediffComp_Regeneration);
         }
     }
 }

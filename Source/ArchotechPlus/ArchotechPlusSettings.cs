@@ -10,7 +10,7 @@ namespace ArchotechPlus
         public static bool RegeneratorResurrects = true;
         public static int MaxResurrectionCharges = 1;
         public static IntRange HealingRange = new IntRange(120, 240);
-        public static IntRange ResurrectionRange =  new IntRange(12, 96);
+        public static IntRange ResurrectionRange = new IntRange(12, 96);
 
         public override void ExposeData()
         {
@@ -24,6 +24,4 @@ namespace ArchotechPlus
             base.ExposeData();
         }
     }
-    
-    
 }

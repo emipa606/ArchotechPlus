@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-using Verse;
+﻿using Verse;
 
 namespace ArchotechPlus
 {
@@ -7,7 +6,7 @@ namespace ArchotechPlus
     {
         public CompProperties_Resurrector()
         {
-            compClass = typeof (CompResurrector);
+            compClass = typeof(CompResurrector);
         }
     }
 }

@@ -9,7 +9,7 @@ namespace ArchotechPlus
         private const int TicksPerHour = 2500;
 
         private IntRange _resurrectionRange = ArchotechPlusSettings.ResurrectionRange;
-        
+
         private int _ticksToResurrection;
         public Corpse Corpse;
 
@@ -20,10 +20,11 @@ namespace ArchotechPlus
         public override void PostSpawnSetup(bool respawningAfterLoad)
         {
             _ticksToResurrection = _resurrectionRange.RandomInRange * TicksPerHour;
-             if (parent.GetType() == typeof(Corpse))
+            if (parent.GetType() == typeof(Corpse))
             {
-                Corpse = (Corpse)parent;
+                Corpse = (Corpse) parent;
             }
+
             base.PostSpawnSetup(respawningAfterLoad);
         }
 
@@ -40,6 +41,7 @@ namespace ArchotechPlus
                 MessageWasResurrectionSuccessful(true);
                 ResurrectionUtility.ResurrectWithSideEffects(Corpse.InnerPawn);
             }
+
             parent.Destroy();
         }
 
@@ -57,6 +59,7 @@ namespace ArchotechPlus
                 var container = (Building_Casket) Corpse.StoringThing();
                 container.EjectContents();
             }
+
             if (!CorpseIsInContainer)
             {
                 return true;
@@ -65,7 +68,7 @@ namespace ArchotechPlus
             Debug.Log("Error: Corpse is in miscellaneous that could not be processed container.");
             return false;
         }
-        
+
         private bool ResurrectionConditionsMet()
         {
             if (!Corpse.DestroyedOrNull() && Corpse.InnerPawn.health.hediffSet.HasHead)
@@ -82,14 +85,14 @@ namespace ArchotechPlus
             if (successful)
             {
                 Messages.Message(
-                    "ArchotechPlusSuccessfulResurrection".Translate((NamedArgument) parent.LabelCap, 
+                    "ArchotechPlusSuccessfulResurrection".Translate((NamedArgument) parent.LabelCap,
                         (NamedArgument) Corpse.InnerPawn.LabelShort,
                         Corpse.InnerPawn.Named("PAWN")), Corpse, MessageTypeDefOf.PositiveEvent);
             }
             else
             {
                 Messages.Message(
-                    "ArchotechPlusFailedResurrection".Translate((NamedArgument) parent.LabelCap, 
+                    "ArchotechPlusFailedResurrection".Translate((NamedArgument) parent.LabelCap,
                         (NamedArgument) Corpse.InnerPawn.LabelShort,
                         Corpse.InnerPawn.Named("PAWN")), Corpse, MessageTypeDefOf.PositiveEvent);
             }

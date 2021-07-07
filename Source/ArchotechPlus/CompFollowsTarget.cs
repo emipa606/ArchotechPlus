@@ -17,5 +17,4 @@ namespace ArchotechPlus
             parent.Position = Target.PositionHeld;
         }
     }
-    
 }
