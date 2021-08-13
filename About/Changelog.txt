@@ -1,5 +1,8 @@
 # Changelog for Archotech+
 
+1.0.3.0 - Fixed the upgrades for the hediffs, had to add harmony to fix the ressurect-hediff
+
+
 1.0.2.0 - Mod updated for 1.3 and passed autotests
 
 

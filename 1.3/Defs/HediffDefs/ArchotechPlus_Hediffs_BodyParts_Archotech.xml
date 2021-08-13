@@ -1,15 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
-  <!-- Surgery Base for Installing implants without medicine.-->
-  <RecipeDef Name="SurgeryInstallArchotechImplantBase" ParentName="SurgeryFlesh" Abstract="True">
-    <workerClass>Recipe_InstallImplant</workerClass>
-    <workAmount>1200</workAmount>
-    <recipeUsers>
-      <li>Human</li>
-    </recipeUsers>
-    <surgerySuccessChanceFactor>99999</surgerySuccessChanceFactor>
-    <anesthetize>false</anesthetize>
-  </RecipeDef>
   <!-- Archotech Injectors Base-->
   <ThingDef Name="ArchotechInjector" ParentName="BodyPartArchotechBase" Abstract="True">
     <thingSetMakerTags>
@@ -63,7 +53,7 @@ See the link below for In-Game Effects:</description>
   </ThingDef>
   <HediffDef ParentName="ImplantHediffBase">
     <defName>ArchotechRegenerator</defName>
-    <hediffClass>Hediff_Implant</hediffClass>
+    <hediffClass>ArchotechPlus.Hediff_LevelWithComps</hediffClass>
     <descriptionHyperlinks>
       <ThingDef>ArchotechRegenerator</ThingDef>
     </descriptionHyperlinks>
@@ -100,70 +90,6 @@ Level 3: All previous capabilities. Additionally, the implant will generate a re
       </li>
     </stages>
   </HediffDef>
-  <RecipeDef ParentName="SurgeryInstallArchotechImplantBase">
-    <defName>InstallArchotechRegenerator</defName>
-    <label>install archotech regenerator</label>
-    <description>Install an archotech regenerator.</description>
-    <descriptionHyperlinks>
-      <ThingDef>ArchotechRegenerator</ThingDef>
-    </descriptionHyperlinks>
-    <jobString>Installing an archotech regenerator.</jobString>
-    <ingredients>
-      <li>
-        <filter>
-          <thingDefs>
-            <li>ArchotechRegenerator</li>
-          </thingDefs>
-        </filter>
-        <count>1</count>
-      </li>
-    </ingredients>
-    <fixedIngredientFilter>
-      <thingDefs>
-        <li>ArchotechRegenerator</li>
-      </thingDefs>
-    </fixedIngredientFilter>
-    <appliedOnFixedBodyParts>
-      <li>Sternum</li>
-    </appliedOnFixedBodyParts>
-    <addsHediff>ArchotechRegenerator</addsHediff>
-  </RecipeDef>
-  <RecipeDef ParentName="SurgeryFlesh">
-    <defName>UpgradeArchotechRegenerator</defName>
-    <label>upgrade archotech regenerator</label>
-    <description>Upgrade an archotech regenerator.</description>
-    <descriptionHyperlinks>
-      <ThingDef>ArchotechRegenerator</ThingDef>
-    </descriptionHyperlinks>
-    <workerClass>Recipe_ChangeImplantLevel</workerClass>
-    <jobString>Upgrading an archotech regenerator.</jobString>
-    <recipeUsers>
-      <li>Human</li>
-    </recipeUsers>
-    <workAmount>1200</workAmount>
-    <ingredients>
-      <li>
-        <filter>
-          <thingDefs>
-            <li>ArchotechRegenerator</li>
-          </thingDefs>
-        </filter>
-        <count>1</count>
-      </li>
-    </ingredients>
-    <fixedIngredientFilter>
-      <thingDefs>
-        <li>ArchotechRegenerator</li>
-      </thingDefs>
-    </fixedIngredientFilter>
-    <appliedOnFixedBodyParts>
-      <li>Sternum</li>
-    </appliedOnFixedBodyParts>
-    <changesHediffLevel>ArchotechRegenerator</changesHediffLevel>
-    <hediffLevelOffset>1</hediffLevelOffset>
-    <surgerySuccessChanceFactor>99999</surgerySuccessChanceFactor>
-    <anesthetize>false</anesthetize>
-  </RecipeDef>
   <!--Archotech Subdermal Armor-->
   <ThingDef ParentName="ArchotechInjector">
     <defName>ArchotechSubdermalArmor</defName>
@@ -196,7 +122,7 @@ See the link below for In-Game Effects:</description>
   </ThingDef>
   <HediffDef ParentName="ImplantHediffBase">
     <defName>ArchotechSubdermalArmor</defName>
-    <hediffClass>Hediff_Implant</hediffClass>
+    <hediffClass>Hediff_Level</hediffClass>
     <descriptionHyperlinks>
       <ThingDef>ArchotechSubdermalArmor</ThingDef>
     </descriptionHyperlinks>
@@ -250,70 +176,6 @@ Level 3: Improved armor rating for the pawn's skin, comparable to an additional 
       </li>
     </stages>
   </HediffDef>
-  <RecipeDef ParentName="SurgeryInstallArchotechImplantBase">
-    <defName>InstallArchotechSubdermalArmor</defName>
-    <label>install archotech subdermal armor</label>
-    <description>Install archotech subdermal armor.</description>
-    <descriptionHyperlinks>
-      <ThingDef>ArchotechSubdermalArmor</ThingDef>
-    </descriptionHyperlinks>
-    <jobString>Installing archotech subdermal armor.</jobString>
-    <ingredients>
-      <li>
-        <filter>
-          <thingDefs>
-            <li>ArchotechSubdermalArmor</li>
-          </thingDefs>
-        </filter>
-        <count>1</count>
-      </li>
-    </ingredients>
-    <fixedIngredientFilter>
-      <thingDefs>
-        <li>ArchotechSubdermalArmor</li>
-      </thingDefs>
-    </fixedIngredientFilter>
-    <appliedOnFixedBodyParts>
-      <li>Torso</li>
-    </appliedOnFixedBodyParts>
-    <addsHediff>ArchotechSubdermalArmor</addsHediff>
-  </RecipeDef>
-  <RecipeDef ParentName="SurgeryFlesh">
-    <defName>UpgradeArchotechSubdermalArmor</defName>
-    <label>upgrade archotech subdermal armor</label>
-    <description>Upgrade archotech subdermal armor.</description>
-    <descriptionHyperlinks>
-      <ThingDef>ArchotechSubdermalArmor</ThingDef>
-    </descriptionHyperlinks>
-    <workerClass>Recipe_ChangeImplantLevel</workerClass>
-    <jobString>Upgrading archotech subdermal armor.</jobString>
-    <recipeUsers>
-      <li>Human</li>
-    </recipeUsers>
-    <workAmount>1200</workAmount>
-    <ingredients>
-      <li>
-        <filter>
-          <thingDefs>
-            <li>ArchotechSubdermalArmor</li>
-          </thingDefs>
-        </filter>
-        <count>1</count>
-      </li>
-    </ingredients>
-    <fixedIngredientFilter>
-      <thingDefs>
-        <li>ArchotechSubdermalArmor</li>
-      </thingDefs>
-    </fixedIngredientFilter>
-    <appliedOnFixedBodyParts>
-      <li>Torso</li>
-    </appliedOnFixedBodyParts>
-    <changesHediffLevel>ArchotechSubdermalArmor</changesHediffLevel>
-    <hediffLevelOffset>1</hediffLevelOffset>
-    <surgerySuccessChanceFactor>99999</surgerySuccessChanceFactor>
-    <anesthetize>false</anesthetize>
-  </RecipeDef>
   <!--Archotech Cortex-->
   <ThingDef ParentName="ArchotechInjector">
     <defName>ArchotechCortex</defName>
@@ -348,7 +210,7 @@ See the link below for In-Game Effects:</description>
   </ThingDef>
   <HediffDef ParentName="ImplantHediffBase">
     <defName>ArchotechCortex</defName>
-    <hediffClass>Hediff_Implant</hediffClass>
+    <hediffClass>Hediff_Level</hediffClass>
     <descriptionHyperlinks>
       <ThingDef>ArchotechCortex</ThingDef>
     </descriptionHyperlinks>
@@ -389,70 +251,6 @@ Level 2: 50% faster learning, 50% faster research, +20% medical tend/surgery qua
       </li>
     </stages>
   </HediffDef>
-  <RecipeDef ParentName="SurgeryInstallArchotechImplantBase">
-    <defName>InstallArchotechCortex</defName>
-    <label>install archotech cortex</label>
-    <description>Install an archotech cortex.</description>
-    <descriptionHyperlinks>
-      <ThingDef>ArchotechCortex</ThingDef>
-    </descriptionHyperlinks>
-    <jobString>Installing an archotech cortex.</jobString>
-    <ingredients>
-      <li>
-        <filter>
-          <thingDefs>
-            <li>ArchotechCortex</li>
-          </thingDefs>
-        </filter>
-        <count>1</count>
-      </li>
-    </ingredients>
-    <fixedIngredientFilter>
-      <thingDefs>
-        <li>ArchotechCortex</li>
-      </thingDefs>
-    </fixedIngredientFilter>
-    <appliedOnFixedBodyParts>
-      <li>Brain</li>
-    </appliedOnFixedBodyParts>
-    <addsHediff>ArchotechCortex</addsHediff>
-  </RecipeDef>
-  <RecipeDef ParentName="SurgeryFlesh">
-    <defName>UpgradeArchotechCortex</defName>
-    <label>upgrade archotech cortex</label>
-    <description>Upgrade an archotech cortex.</description>
-    <descriptionHyperlinks>
-      <ThingDef>ArchotechCortex</ThingDef>
-    </descriptionHyperlinks>
-    <workerClass>Recipe_ChangeImplantLevel</workerClass>
-    <jobString>Upgrading archotech cortex.</jobString>
-    <recipeUsers>
-      <li>Human</li>
-    </recipeUsers>
-    <workAmount>1200</workAmount>
-    <ingredients>
-      <li>
-        <filter>
-          <thingDefs>
-            <li>ArchotechCortex</li>
-          </thingDefs>
-        </filter>
-        <count>1</count>
-      </li>
-    </ingredients>
-    <fixedIngredientFilter>
-      <thingDefs>
-        <li>ArchotechCortex</li>
-      </thingDefs>
-    </fixedIngredientFilter>
-    <appliedOnFixedBodyParts>
-      <li>Brain</li>
-    </appliedOnFixedBodyParts>
-    <changesHediffLevel>ArchotechCortex</changesHediffLevel>
-    <hediffLevelOffset>1</hediffLevelOffset>
-    <surgerySuccessChanceFactor>99999</surgerySuccessChanceFactor>
-    <anesthetize>false</anesthetize>
-  </RecipeDef>
   <!--Archotech Bioadapter-->
   <ThingDef ParentName="ArchotechInjector">
     <defName>ArchotechBioadapter</defName>
@@ -487,12 +285,14 @@ See the link below for In-Game Effects:</description>
   </ThingDef>
   <HediffDef ParentName="ImplantHediffBase">
     <defName>ArchotechBioadapter</defName>
-    <hediffClass>Hediff_Implant</hediffClass>
+    <hediffClass>Hediff_Level</hediffClass>
     <descriptionHyperlinks>
       <ThingDef>ArchotechBioadapter</ThingDef>
     </descriptionHyperlinks>
     <label>archotech bioadapter</label>
     <labelNoun>an archotech bioadapter</labelNoun>
+    <isBad>false</isBad>
+    <priceImpact>true</priceImpact>
     <description>An installed archotech bioadapter.
       
 Effects
@@ -524,68 +324,4 @@ Level 2: 25C (45F) wider comfortable temperature range, 20% faster immunity gain
       </li>
     </stages>
   </HediffDef>
-  <RecipeDef ParentName="SurgeryInstallArchotechImplantBase">
-    <defName>InstallArchotechBioadapter</defName>
-    <label>install archotech bioadapter</label>
-    <description>Install an archotech bioadapter.</description>
-    <descriptionHyperlinks>
-      <ThingDef>ArchotechBioadapter</ThingDef>
-    </descriptionHyperlinks>
-    <jobString>Installing an archotech bioadapter.</jobString>
-    <ingredients>
-      <li>
-        <filter>
-          <thingDefs>
-            <li>ArchotechBioadapter</li>
-          </thingDefs>
-        </filter>
-        <count>1</count>
-      </li>
-    </ingredients>
-    <fixedIngredientFilter>
-      <thingDefs>
-        <li>ArchotechBioadapter</li>
-      </thingDefs>
-    </fixedIngredientFilter>
-    <appliedOnFixedBodyParts>
-      <li>Liver</li>
-    </appliedOnFixedBodyParts>
-    <addsHediff>ArchotechBioadapter</addsHediff>
-  </RecipeDef>
-  <RecipeDef ParentName="SurgeryFlesh">
-    <defName>UpgradeArchotechBioadapter</defName>
-    <label>upgrade archotech bioadapter</label>
-    <description>Upgrade an archotech bioadapter.</description>
-    <descriptionHyperlinks>
-      <ThingDef>ArchotechBioadapter</ThingDef>
-    </descriptionHyperlinks>
-    <workerClass>Recipe_ChangeImplantLevel</workerClass>
-    <jobString>Upgrading archotech bioadapter.</jobString>
-    <recipeUsers>
-      <li>Human</li>
-    </recipeUsers>
-    <workAmount>1200</workAmount>
-    <ingredients>
-      <li>
-        <filter>
-          <thingDefs>
-            <li>ArchotechBioadapter</li>
-          </thingDefs>
-        </filter>
-        <count>1</count>
-      </li>
-    </ingredients>
-    <fixedIngredientFilter>
-      <thingDefs>
-        <li>ArchotechBioadapter</li>
-      </thingDefs>
-    </fixedIngredientFilter>
-    <appliedOnFixedBodyParts>
-      <li>Liver</li>
-    </appliedOnFixedBodyParts>
-    <changesHediffLevel>ArchotechBioadapter</changesHediffLevel>
-    <hediffLevelOffset>1</hediffLevelOffset>
-    <surgerySuccessChanceFactor>99999</surgerySuccessChanceFactor>
-    <anesthetize>false</anesthetize>
-  </RecipeDef>
 </Defs>

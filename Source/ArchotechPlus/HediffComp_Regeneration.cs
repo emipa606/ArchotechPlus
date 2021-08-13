@@ -123,9 +123,9 @@ namespace ArchotechPlus
             BodyPartRecord bodyPartRecord = null;
             foreach (var partsCommonAncestor in Pawn.health.hediffSet.GetMissingPartsCommonAncestors().Where(
                 partsCommonAncestor =>
-                    (double) partsCommonAncestor.Part.coverageAbsWithChildren >= (double) minCoverage &&
+                    partsCommonAncestor.Part.coverageAbsWithChildren >= (double) minCoverage &&
                     !Pawn.health.hediffSet.PartOrAnyAncestorHasDirectlyAddedParts(partsCommonAncestor.Part) &&
-                    (bodyPartRecord == null || (double) partsCommonAncestor.Part.coverageAbsWithChildren >
+                    (bodyPartRecord == null || partsCommonAncestor.Part.coverageAbsWithChildren >
                         (double) bodyPartRecord.coverageAbsWithChildren)))
             {
                 bodyPartRecord = partsCommonAncestor.Part;
