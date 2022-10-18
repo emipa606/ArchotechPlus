@@ -2,16 +2,15 @@
 using HarmonyLib;
 using Verse;
 
-namespace ArchotechPlus
+namespace ArchotechPlus;
+
+[StaticConstructorOnStartup]
+public static class Main
 {
-    [StaticConstructorOnStartup]
-    public static class Main
+    static Main()
     {
-        static Main()
-        {
-            var harmony = new Harmony("Mlie.ArchotechPlus");
-            harmony.PatchAll(Assembly.GetExecutingAssembly());
-            Log.Message("[ArchotechPlus] Patched Hediff applyer");
-        }
+        var harmony = new Harmony("Mlie.ArchotechPlus");
+        harmony.PatchAll(Assembly.GetExecutingAssembly());
+        Log.Message("[ArchotechPlus] Patched Hediff applyer");
     }
 }

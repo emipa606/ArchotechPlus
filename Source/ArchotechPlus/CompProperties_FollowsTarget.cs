@@ -1,12 +1,11 @@
 ﻿using Verse;
 
-namespace ArchotechPlus
+namespace ArchotechPlus;
+
+public class CompProperties_FollowsTarget : CompProperties
 {
-    public class CompProperties_FollowsTarget : CompProperties
+    public CompProperties_FollowsTarget()
     {
-        public CompProperties_FollowsTarget()
-        {
-            compClass = typeof(CompFollowsTarget);
-        }
+        compClass = typeof(CompFollowsTarget);
     }
 }

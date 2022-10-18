@@ -1,12 +1,11 @@
 ﻿using Verse;
 
-namespace ArchotechPlus
+namespace ArchotechPlus;
+
+public class CompProperties_Resurrector : CompProperties
 {
-    public class CompProperties_Resurrector : CompProperties
+    public CompProperties_Resurrector()
     {
-        public CompProperties_Resurrector()
-        {
-            compClass = typeof(CompResurrector);
-        }
+        compClass = typeof(CompResurrector);
     }
 }
