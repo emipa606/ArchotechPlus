@@ -46,9 +46,7 @@ See the link below for In-Game Effects:</description>
         <bodyPart>Sternum</bodyPart>
         <canUpgrade>true</canUpgrade>
       </li>
-      <li Class="CompProperties_UseEffect">
-        <compClass>CompUseEffect_DestroySelf</compClass>
-      </li>
+      <li Class="CompProperties_UseEffectDestroySelf" />
     </comps>
   </ThingDef>
   <HediffDef ParentName="ImplantHediffBase">
@@ -115,9 +113,7 @@ See the link below for In-Game Effects:</description>
         <bodyPart>Torso</bodyPart>
         <canUpgrade>true</canUpgrade>
       </li>
-      <li Class="CompProperties_UseEffect">
-        <compClass>CompUseEffect_DestroySelf</compClass>
-      </li>
+      <li Class="CompProperties_UseEffectDestroySelf" />
     </comps>
   </ThingDef>
   <HediffDef ParentName="ImplantHediffBase">
@@ -203,9 +199,7 @@ See the link below for In-Game Effects:</description>
         <bodyPart>Brain</bodyPart>
         <canUpgrade>true</canUpgrade>
       </li>
-      <li Class="CompProperties_UseEffect">
-        <compClass>CompUseEffect_DestroySelf</compClass>
-      </li>
+      <li Class="CompProperties_UseEffectDestroySelf" />
     </comps>
   </ThingDef>
   <HediffDef ParentName="ImplantHediffBase">
@@ -278,9 +272,7 @@ See the link below for In-Game Effects:</description>
         <bodyPart>Liver</bodyPart>
         <canUpgrade>true</canUpgrade>
       </li>
-      <li Class="CompProperties_UseEffect">
-        <compClass>CompUseEffect_DestroySelf</compClass>
-      </li>
+      <li Class="CompProperties_UseEffectDestroySelf" />
     </comps>
   </ThingDef>
   <HediffDef ParentName="ImplantHediffBase">
