@@ -21,17 +21,7 @@
   <ThingDef ParentName="ArchotechInjector">
     <defName>ArchotechRegenerator</defName>
     <label>archotech regenerator</label>
-    <description>The regenerator is a nearly mythical creation of the archotechs implanted in the sternum. While it looks like a featureless sphereoid at first glace, this appearance hides an almost imcomprehensible maze of bioneural circuitry wrapped around vanometrically powered microfabricators. Once installed, it passively manufactures pico-scale mechanites that slowly restore the host's telomerase, restoring to them to their biological mid-20's and granting them seemingly eternal youth. An internal sub-routine AI also begins manufacturing healing mechanites to release directly into the host's bloodstream upon detecting damage, promoting the rapid healing of wounds. 
-      
-This implant may be self-installed without any concern to the user. When pressed into the sternum, the implant's mechanites disassemble the implant into a polychromatic fluid and pass throught the skin, where it is then integrated into the host. Once installed, it cannot be removed.
-      
-An installed regenerator may be upgraded with an additional implant. Upon upgrading, the embedded AI will become fully functional and begin releasing more complex healing mechanites into the bloodstream that will heal long-term damage. It can even regenerate missing or destroyed limbs or organs over time, though it cannot respond quickly enough to prevent fatal damage should it occur quickly.
-
-A third and final upgrade gives the implant a larger mechanite capacity, reducing the time needed to heal wounds. Should fatal damage be incurred, the implant will release a burst of mechanites that will attempt to bring the user back to life, though this often takes hours or even days.
-
-The materials and engineering behind this implant are far beyond normal human comprehension.
-    
-See the link below for In-Game Effects:</description>
+    <description>The regenerator is a nearly mythical creation of the archotechs implanted in the sternum. While it looks like a featureless spheroid at first glace, this appearance hides an almost incomprehensible maze of bio neural circuitry wrapped around vanometrically powered microfabricators. \n\n Once installed, it passively manufactures pico-scale mechanites that slowly restore the host's telomerase, restoring to them to their biological mid-20's and granting them seemingly eternal youth. An internal sub-routine AI also begins manufacturing healing mechanites to release directly into the host's bloodstream upon detecting damage, promoting the rapid healing of wounds. This implant may be self-installed without any concern to the user. When pressed into the sternum, the implant's mechanites disassemble the implant into a polychromatic fluid and pass through the skin, where it is then integrated into the host. Once installed, it cannot be removed.An installed regenerator may be upgraded with an additional implant. Upon upgrading, the embedded AI will become fully functional and begin releasing more complex healing mechanites into the bloodstream that will heal long-term damage. It can even regenerate missing or destroyed limbs or organs over time, though it cannot respond quickly enough to prevent fatal damage should it occur quickly. \n\nA third and final upgrade gives the implant a larger mechanite capacity, reducing the time needed to heal wounds. Should fatal damage be incurred, the implant will release a burst of mechanites that will attempt to bring the user back to life, though this often takes hours or even days. \n\nThe materials and engineering behind this implant are far beyond normal human comprehension.\n\nSee the link below for In-Game effects:</description>
     <descriptionHyperlinks>
       <HediffDef>ArchotechRegenerator</HediffDef>
     </descriptionHyperlinks>
@@ -60,12 +50,7 @@ See the link below for In-Game Effects:</description>
     <description>An installed archotech regenerator.
       
 Effects
-      
-Level 1: +75% Healing Rate, Pawn will reverse-age 10 years per year to target age.
-      
-Level 2: All previous capabilties. The implant will generate charges and use them to regenerate parts or heal chronic conditions. Charges may be seen by hovering over the regenerator in the health menu. The number of charges and the charge rate may be set to your preference in the mod options.
-      
-Level 3: All previous capabilities. Additionally, the implant will generate a resurrection mist upon death if the implant is charged, which will attempt to resurrect the pawn after the time set in your mod-settings. The pawn must have a body with a head to be resurrected.</description>
+\nLevel 1: +75% Healing Rate, Pawn will reverse-age 10 years per year to target age. \nLevel 2: All previous capabilities. The implant will generate charges and use them to regenerate parts or heal chronic conditions. Charges may be seen by hovering over the regenerator in the health menu. The number of charges and the charge rate may be set to your preference in the mod options. \nLevel 3: All previous capabilities. Additionally, the implant will generate a resurrection mist upon death if the implant is charged, which will attempt to resurrect the pawn after the time set in your mod-settings. The pawn must have a body with a head to be resurrected.</description>
     <comps>
       <li Class="ArchotechPlus.HediffCompProperties_Regeneration">
       </li>
@@ -99,7 +84,7 @@ Level 3: All previous capabilities. Additionally, the implant will generate a re
       
 This implant may be self-installed without any concern to the user. When pressed into the chest, the implant's mechanites disassemble the implant into a polychromatic fluid and pass through the skin, where it quickly integrates into the host. Due to the seamless and total integration into the user's epidermis, it cannot be removed once installed.
 
-Subdermal armor may be upgraded with an additional subdermal armor implant. Upon upgrading, a secondary layer is established beneath the first. This secondary layer effectively doubles the absorbive and coagulative properties of the first, giving the host protection comparable to advanced armorskin implants without any asthetic effects.
+Subdermal armor may be upgraded with an additional subdermal armor implant. Upon upgrading, a secondary layer is established beneath the first. This secondary layer effectively doubles the absorptive and coagulative properties of the first, giving the host protection comparable to advanced armor skin implants without any aesthetic effects.
       
 See the link below for In-Game Effects:</description>
     <comps>
@@ -130,9 +115,9 @@ Effects
 
 Level 1: Improved armor rating for the pawn's skin, comparable to an additional leather layer. Reduced bleeding from injuries by 20%.
 
-Level 2: Improved armor rating for the pawn's skin, comparable to an additional synthread layer. Reduced bleeding from injuries by 40%. Damage recieved is reduced by 10%.
+Level 2: Improved armor rating for the pawn's skin, comparable to an additional synthread layer. Reduced bleeding from injuries by 40%. Damage received is reduced by 10%.
       
-Level 3: Improved armor rating for the pawn's skin, comparable to an additional devilstrand layer. Reduced bleeding from injuries by 60%. Damage recieved is reduced by 25%.</description>
+Level 3: Improved armor rating for the pawn's skin, comparable to an additional devilstrand layer. Reduced bleeding from injuries by 60%. Damage received is reduced by 25%.</description>
     <initialSeverity>1</initialSeverity>
     <minSeverity>0</minSeverity>
     <maxSeverity>3</maxSeverity>
@@ -179,9 +164,9 @@ Level 3: Improved armor rating for the pawn's skin, comparable to an additional 
     <descriptionHyperlinks>
       <HediffDef>ArchotechCortex</HediffDef>
     </descriptionHyperlinks>
-    <description>A brain implant (cortex) designed by an archotech. The exact way this implant works is beyond human understanding, or even the comprehension of a mind that utilizes it. It appears that the thin metallic mesh that sits on top of the brain allows for it to teleport eletrical signals to other distant areas of the brain, allowing for faster thought processes to take place and for problematic or troublesome thoughts such as pain or distress to be rapidly analyzed and accepted by the user. Interestingly, the implant loses effectiveness if the user ever examines any archotech technologies, leading to a prevailing theory that the archotech implants seen in the rim are intended for the servants of the archotechs and that the truly ascendant archotech is kept strictly amongst themselves.
+    <description>A brain implant (cortex) designed by an archotech. The exact way this implant works is beyond human understanding, or even the comprehension of a mind that utilizes it. It appears that the thin metallic mesh that sits on top of the brain allows for it to teleport electric signals to other distant areas of the brain, allowing for faster thought processes to take place and for problematic or troublesome thoughts such as pain or distress to be rapidly analyzed and accepted by the user. Interestingly, the implant loses effectiveness if the user ever examines any archotech technologies, leading to a prevailing theory that the archotech implants seen in the rim are intended for the servants of the archotechs and that the truly ascendant archotech is kept strictly amongst themselves.
 
-This implant may be self-installed without any concern to the user. When pressed into the forehead, the implant's mechanites disassemble the implant into a polychromatic fluid and pass throught the skin, where it integrates into the host's brain. Due to the seamless and total integration into the user's cortex, it cannot be removed once installed.
+This implant may be self-installed without any concern to the user. When pressed into the forehead, the implant's mechanites disassemble the implant into a polychromatic fluid and pass through the skin, where it integrates into the host's brain. Due to the seamless and total integration into the user's cortex, it cannot be removed once installed.
 
 An archotech cortex may be upgraded with an additional cortex implant. Upon upgrading, the metallic mesh fully envelopes the host's cortex and allows for significantly faster connections between regions of the brain as well as superior control of intrusive feelings or impulses such as pain or emotional distress. 
 
@@ -254,7 +239,7 @@ Level 2: 50% faster learning, 50% faster research, +20% medical tend/surgery qua
     </descriptionHyperlinks>
     <description>The bioadapter is an archotech designed liver implant composed of nesting, golden-hued coils that wrap tightly around the host's liver. These coils serve as extremely efficient filters for the bloodstream, reducing the effects of toxic buildup on the host. Each coil is powered by a still unknown internal energy source that can cool or heat the blood, which allows the user to more comfortably inhabit extreme temperatures.
 
-This implant may be self-installed without any concern to the user. When pressed into the abdomen, the implant's mechanites disassemble the implant into a polychromatic fluid and pass throught the skin, where it quickly reconstitutes itself around the kidneys. Due to the seamless and total integration into the user's circulatory system, it cannot be removed once installed.
+This implant may be self-installed without any concern to the user. When pressed into the abdomen, the implant's mechanites disassemble the implant into a polychromatic fluid and pass through the skin, where it quickly reconstitutes itself around the kidneys. Due to the seamless and total integration into the user's circulatory system, it cannot be removed once installed.
 
 An archotech bioadapter may be upgraded with an additional bioadapter. Upon upgrading, the implant's filtration is greatly enhanced, allowing for the host to operate in toxic fallout indefinitely. The heating and cooling capabilities of the implant are also enhanced, allowing the user to comfortably operate in extreme temperatures. 
       
