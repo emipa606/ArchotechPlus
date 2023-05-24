@@ -47,9 +47,7 @@
     </descriptionHyperlinks>
     <label>archotech regenerator</label>
     <labelNoun>an archotech regenerator</labelNoun>
-    <description>An installed archotech regenerator.
-      
-Effects \n\nLevel 1: +75% Healing Rate, Pawn will reverse-age 10 years per year to target age. \n\nLevel 2: All previous capabilities. The implant will generate charges and use them to regenerate parts or heal chronic conditions. Charges may be seen by hovering over the regenerator in the health menu. The number of charges and the charge rate may be set to your preference in the mod options. \n\nLevel 3: All previous capabilities. Additionally, the implant will generate a resurrection mist upon death if the implant is charged, which will attempt to resurrect the pawn after the time set in your mod-settings. The pawn must have a body with a head to be resurrected.
+    <description>An installed archotech regenerator. \n\nEffects \n\nLevel 1: +75% Healing Rate, Pawn will reverse-age 10 years per year to target age. \n\nLevel 2: All previous capabilities. The implant will generate charges and use them to regenerate parts or heal chronic conditions. Charges may be seen by hovering over the regenerator in the health menu. The number of charges and the charge rate may be set to your preference in the mod options. \n\nLevel 3: All previous capabilities. Additionally, the implant will generate a resurrection mist upon death if the implant is charged, which will attempt to resurrect the pawn after the time set in your mod-settings. The pawn must have a body with a head to be resurrected.
 </description>
     <comps>
       <li Class="ArchotechPlus.HediffCompProperties_Regeneration">
@@ -80,7 +78,7 @@ Effects \n\nLevel 1: +75% Healing Rate, Pawn will reverse-age 10 years per year 
     <descriptionHyperlinks>
       <HediffDef>ArchotechSubdermalArmor</HediffDef>
     </descriptionHyperlinks>
-    <description>A skin-armor system designed by an archotech implanted in the torso. Subdermal armor is a layer of micron-thin plasteel lattice suspended in an unknown sheer-thickening fluid. When struck, the fluid stiffens and dampens the impact while the lattice helps disperse any thermal injuries. Embedded anti hemorrhagic nanoparticles help reduce bleeding should the layer be punctured. \n\nThis implant may be self-installed without any concern to the user. When pressed into the chest, the implant's mechanites disassemble the implant into a polychromatic fluid and pass through the skin, where it quickly integrates into the host. Due to the seamless and total integration into the user's epidermis, it cannot be removed once installed. \n\nSubdermal armor may be upgraded with an additional subdermal armor implant. Upon upgrading, a secondary layer is established beneath the first. This secondary layer effectively doubles the absorptive and coagulative properties of the first, giving the host protection comparable to advanced armor skin implants without any aesthetic effects. \n\nSee the link below for In-Game Effects:</description>
+    <description>A skin-armor system designed by an archotech implanted in the torso. Subdermal armor is a layer of micron-thin plasteel lattice suspended in an unknown sheer-thickening fluid. When struck, the fluid stiffens and dampens the impact while the lattice helps disperse any thermal injuries. Embedded anti hemorrhagic nanoparticles help reduce bleeding should the layer be punctured. \n\nThis implant may be self-installed without any concern to the user. When pressed into the chest, the implant's mechanites disassemble the implant into a polychromatic fluid and pass through the skin, where it quickly integrates into the host. Due to the seamless and total integration into the user's epidermis, it cannot be removed once installed. \n\nSubdermal armor may be upgraded with an additional subdermal armor implant. Upon upgrading, a secondary layer is established beneath the first. This secondary layer effectively doubles the absorptive and coagulative properties of the first, giving the host protection comparable to advanced armor skin implants without any aesthetic effects. \n\nSee the link below for In-Game effects:</description>
     <comps>
       <li Class="CompProperties_Usable">
         <compClass>CompUsableImplant</compClass>
@@ -173,9 +171,7 @@ Effects \n\nLevel 1: +75% Healing Rate, Pawn will reverse-age 10 years per year 
     </descriptionHyperlinks>
     <label>archotech cortex</label>
     <labelNoun>an archotech cortex</labelNoun>
-    <description>An installed archotech cortex.
-      
-Effects \n\nLevel 1: 25% faster learning, 25% faster research, +10% medical tend/surgery quality, -5% mental break threshold, 5% increased pain shock threshold. \n\nLevel 2: 50% faster learning, 50% faster research, +20% medical tend/surgery quality, -10% mental break threshold, 10% increased pain shock threshold.</description>
+    <description>An installed archotech cortex. \n\nEffects \n\nLevel 1: 25% faster learning, 25% faster research, +10% medical tend/surgery quality, -5% mental break threshold, 5% increased pain shock threshold. \n\nLevel 2: 50% faster learning, 50% faster research, +20% medical tend/surgery quality, -10% mental break threshold, 10% increased pain shock threshold.</description>
     <initialSeverity>1</initialSeverity>
     <minSeverity>0</minSeverity>
     <maxSeverity>2</maxSeverity>
@@ -211,7 +207,7 @@ Effects \n\nLevel 1: 25% faster learning, 25% faster research, +10% medical tend
     <descriptionHyperlinks>
       <HediffDef>ArchotechBioadapter</HediffDef>
     </descriptionHyperlinks>
-    <description>The bioadapter is an archotech designed liver implant composed of nesting, golden-hued coils that wrap tightly around the host's liver. These coils serve as extremely efficient filters for the bloodstream, reducing the effects of toxic buildup on the host. Each coil is powered by a still unknown internal energy source that can cool or heat the blood, which allows the user to more comfortably inhabit extreme temperatures. \n\nThis implant may be self-installed without any concern to the user. When pressed into the abdomen, the implant's mechanites disassemble the implant into a polychromatic fluid and pass through the skin, where it quickly reconstitutes itself around the kidneys. Due to the seamless and total integration into the user's circulatory system, it cannot be removed once installed. \n\nAn archotech bioadapter may be upgraded with an additional bioadapter. Upon upgrading, the implant's filtration is greatly enhanced, allowing for the host to operate in toxic fallout indefinitely. The heating and cooling capabilities of the implant are also enhanced, allowing the user to comfortably operate in extreme temperatures. \n\nThe materials and physics used in this implant are far beyond our comprehension or ability to recreate. \n\nSee the link below for In-Game Effects:</description>
+    <description>The bioadapter is an archotech designed liver implant composed of nesting, golden-hued coils that wrap tightly around the host's liver. These coils serve as extremely efficient filters for the bloodstream, reducing the effects of toxic buildup on the host. Each coil is powered by a still unknown internal energy source that can cool or heat the blood, which allows the user to more comfortably inhabit extreme temperatures. \n\nThis implant may be self-installed without any concern to the user. When pressed into the abdomen, the implant's mechanites disassemble the implant into a polychromatic fluid and pass through the skin, where it quickly reconstitutes itself around the kidneys. Due to the seamless and total integration into the user's circulatory system, it cannot be removed once installed. \n\nAn archotech bioadapter may be upgraded with an additional bioadapter. Upon upgrading, the implant's filtration is greatly enhanced, allowing for the host to operate in toxic fallout indefinitely. The heating and cooling capabilities of the implant are also enhanced, allowing the user to comfortably operate in extreme temperatures. \n\nThe materials and physics used in this implant are far beyond our comprehension or ability to recreate. \n\nSee the link below for In-Game effects:</description>
     <comps>
       <li Class="CompProperties_Usable">
         <compClass>CompUsableImplant</compClass>
@@ -236,9 +232,7 @@ Effects \n\nLevel 1: 25% faster learning, 25% faster research, +10% medical tend
     <labelNoun>an archotech bioadapter</labelNoun>
     <isBad>false</isBad>
     <priceImpact>true</priceImpact>
-    <description>An installed archotech bioadapter.
-      
-Effects \n\nLevel 1: 15C (27F) wider comfortable temperature range, 10% faster immunity gain, 50% resistance to toxic fallout. \n\nLevel 2: 25C (45F) wider comfortable temperature range, 20% faster immunity gain, 100% resistance to toxic fallout.</description>
+    <description>An installed archotech bioadapter \n\nEffects \n\nLevel 1: 15C (27F) wider comfortable temperature range, 10% faster immunity gain, 50% resistance to toxic fallout. \n\nLevel 2: 25C (45F) wider comfortable temperature range, 20% faster immunity gain, 100% resistance to toxic fallout.</description>
     <initialSeverity>1</initialSeverity>
     <minSeverity>0</minSeverity>
     <maxSeverity>2</maxSeverity>
