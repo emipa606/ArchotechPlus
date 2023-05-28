@@ -1,5 +1,8 @@
 # Changelog for Archotech+
 
+1.4.5 - Fixed the extra whitespaces
+
+
 1.4.4 - Updated descriptions, thanks to Chunnyluny!
 
 
