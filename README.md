@@ -79,6 +79,4 @@ Yes. The pawn will burst out of the grave like the kool-aid man when they get re
 -  If you have the solution for a problem, please post it to the GitHub repository.
 
 
-
-
-https://steamcommunity.com/sharedfiles/filedetails/changelog/2270493883]Last updated 2023-05-12
+https://steamcommunity.com/sharedfiles/filedetails/changelog/2270493883]Last updated 2023-05-28

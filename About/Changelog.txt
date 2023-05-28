@@ -1,5 +1,8 @@
 # Changelog for Archotech+
 
+1.4.4 - Updated descriptions, thanks to Chunnyluny!
+
+
 1.4.3 - Implants should now have the bodypart that they are implanted in visible in the description
 
 
