@@ -14,7 +14,7 @@ public class ArchotechPlus : Mod
     {
         _settings = GetSettings<ArchotechPlusSettings>();
         currentVersion =
-            VersionFromManifest.GetVersionFromModMetaData(ModLister.GetActiveModWithIdentifier("Mlie.ArchotechPlus"));
+            VersionFromManifest.GetVersionFromModMetaData(content.ModMetaData);
     }
 
     public override void DoSettingsWindowContents(Rect inRect)

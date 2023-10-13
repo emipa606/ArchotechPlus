@@ -23,4 +23,8 @@
   <ArchotechPlusNoResurrectorCharges>У архонта {PAWN_labelShort} не было достаточного заряда, чтобы создать воскрешающий туман.</ArchotechPlusNoResurrectorCharges>
   <ArchotechPlusSuccessfulResurrection>{PAWN_labelShort} был воскрешен {PAWN_possessive} архотеком-регенератором!</ArchotechPlusSuccessfulResurrection>
   <ArchotechPlusFailedResurrection>Тело {PAWN_labelShort} было слишком повреждено, чтобы {PAWN_possessive} регенератор смог вернуть {PAWN_objective} к жизни!</ArchotechPlusFailedResurrection>
+  <ArchotechPlusFillRegen>DEBUG: Максимальное количество реген-зарядов</ArchotechPlusFillRegen>
+  <ArchotechPlusFillRegenTT>Установите максимальное значение заряда регенерации</ArchotechPlusFillRegenTT>
+  <ArchotechPlusFillRessurect>DEBUG: Максимальное количество восстановительных зарядов</ArchotechPlusFillRessurect>
+  <ArchotechPlusFillRessurectTT>Установите максимальное значение заряда повторного срабатывания</ArchotechPlusFillRessurectTT>
 </LanguageData>

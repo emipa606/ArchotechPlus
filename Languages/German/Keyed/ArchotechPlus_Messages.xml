@@ -23,4 +23,8 @@
   <ArchotechPlusNoResurrectorCharges>Der Archotech von {PAWN_labelShort} hatte nicht genügend Ladung, um einen wiederbelebenden Nebel zu erzeugen.</ArchotechPlusNoResurrectorCharges>
   <ArchotechPlusSuccessfulResurrection>{PAWN_labelShort} wurde von {PAWN_possessive} archotech regenerator wiederbelebt!</ArchotechPlusSuccessfulResurrection>
   <ArchotechPlusFailedResurrection>Der Körper von {PAWN_labelShort} ist zu beschädigt, als dass {PAWN_possessive} Regenerator {PAWN_objective} wieder zum Leben erwecken könnte!</ArchotechPlusFailedResurrection>
+  <ArchotechPlusFillRegen>DEBUG: Max Regen-Ladungen</ArchotechPlusFillRegen>
+  <ArchotechPlusFillRegenTT>Regenerationsladungen auf Maximum setzen</ArchotechPlusFillRegenTT>
+  <ArchotechPlusFillRessurect>DEBUG: Max Ressurect-Ladungen</ArchotechPlusFillRessurect>
+  <ArchotechPlusFillRessurectTT>Wiederaufladungen auf Maximum einstellen</ArchotechPlusFillRessurectTT>
 </LanguageData>

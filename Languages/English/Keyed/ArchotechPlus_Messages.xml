@@ -1,6 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <LanguageData>
   <ArchotechPlusModVersion>Installed mod-version: {0}</ArchotechPlusModVersion>
+  <ArchotechPlusFillRegen>DEBUG: Max Regen-charges</ArchotechPlusFillRegen>
+  <ArchotechPlusFillRegenTT>Set regen charges to maximum</ArchotechPlusFillRegenTT>
+  <ArchotechPlusFillRessurect>DEBUG: Max Ressurect-charges</ArchotechPlusFillRessurect>
+  <ArchotechPlusFillRessurectTT>Set ressurect charges to maximum</ArchotechPlusFillRessurectTT>
   <ArchotechPlusDeAge>Regenerator can de-age</ArchotechPlusDeAge>
   <ArchotechPlusDeAgeTooltip>The regenerator will change the age of the pawn when used.\nDefault: Enabled</ArchotechPlusDeAgeTooltip>
   <ArchotechPlusAge>Regenerator's Target Age in Years:</ArchotechPlusAge>

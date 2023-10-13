@@ -23,4 +23,8 @@
   <ArchotechPlusNoResurrectorCharges>{PAWN_labelShort}的拱形技术没有足够的电荷来制造复活的雾。</ArchotechPlusNoResurrectorCharges>
   <ArchotechPlusSuccessfulResurrection>{PAWN_labelShort}已经被{PAWN_possessive}archotech regenerator复活了!</ArchotechPlusSuccessfulResurrection>
   <ArchotechPlusFailedResurrection>{PAWN_labelShort}的身体已经受损，{PAWN_possessive}的再生器无法使{PAWN_objective}复活!</ArchotechPlusFailedResurrection>
+  <ArchotechPlusFillRegen>故障：最大再生充电量</ArchotechPlusFillRegen>
+  <ArchotechPlusFillRegenTT>将再生充电设置为最大值</ArchotechPlusFillRegenTT>
+  <ArchotechPlusFillRessurect>DEBUG：最大恢复充能</ArchotechPlusFillRessurect>
+  <ArchotechPlusFillRessurectTT>将再吸附装药量设为最大值</ArchotechPlusFillRessurectTT>
 </LanguageData>

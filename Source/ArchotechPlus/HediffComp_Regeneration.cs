@@ -1,6 +1,8 @@
-﻿using System.Linq;
+﻿using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using RimWorld;
+using UnityEngine;
 using Verse;
 
 namespace ArchotechPlus;
@@ -103,6 +105,45 @@ public class HediffComp_Regeneration : HediffComp
 
         _healingCharges--;
         return true;
+    }
+
+    public override IEnumerable<Gizmo> CompGetGizmos()
+    {
+        var baseGizmos = base.CompGetGizmos();
+        if (baseGizmos?.Any() == true)
+        {
+            foreach (var gizmo in base.CompGetGizmos())
+            {
+                yield return gizmo;
+            }
+        }
+
+        if (!Prefs.DevMode)
+        {
+            yield break;
+        }
+
+        if (HealerCanCharge())
+        {
+            yield return new Command_Action
+            {
+                defaultLabel = "ArchotechPlusFillRegen".Translate(),
+                defaultDesc = "ArchotechPlusFillRegenTT".Translate(),
+                icon = ContentFinder<Texture2D>.Get("UI/Overlays/Arrow"),
+                action = delegate { _healingCharges = _maxHealingCharges; }
+            };
+        }
+
+        if (ResurrectorCanCharge())
+        {
+            yield return new Command_Action
+            {
+                defaultLabel = "ArchotechPlusFillRessurect".Translate(),
+                defaultDesc = "ArchotechPlusFillRessurectTT".Translate(),
+                icon = ContentFinder<Texture2D>.Get("UI/Overlays/Arrow"),
+                action = delegate { _resurrectionCharges = _maxResurrectionCharges; }
+            };
+        }
     }
 
     private void ResetChargingTicks()

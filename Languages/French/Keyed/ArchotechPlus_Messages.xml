@@ -23,4 +23,8 @@
   <ArchotechPlusNoResurrectorCharges>L'archétype de {PAWN_labelShort} n'avait pas assez de charge pour créer un brouillard ressuscitant.</ArchotechPlusNoResurrectorCharges>
   <ArchotechPlusSuccessfulResurrection>{PAWN_labelShort} a été ressuscité par {PAWN_possessive} régénérateur archotech !</ArchotechPlusSuccessfulResurrection>
   <ArchotechPlusFailedResurrection>Le corps de {PAWN_labelShort} a été trop endommagé pour que le régénérateur {PAWN_possessive} puisse ramener {PAWN_objectif} à la vie !</ArchotechPlusFailedResurrection>
+  <ArchotechPlusFillRegen>DEBUG : Max Regen-charges</ArchotechPlusFillRegen>
+  <ArchotechPlusFillRegenTT>Régler les charges de régénération au maximum</ArchotechPlusFillRegenTT>
+  <ArchotechPlusFillRessurect>DEBUG : Max Ressurect-charges</ArchotechPlusFillRessurect>
+  <ArchotechPlusFillRessurectTT>Régler les charges de pression au maximum</ArchotechPlusFillRessurectTT>
 </LanguageData>
