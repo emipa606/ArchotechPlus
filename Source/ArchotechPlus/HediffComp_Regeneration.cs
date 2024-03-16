@@ -236,7 +236,7 @@ public class HediffComp_Regeneration : HediffComp
         Pawn.ageTracker.AgeBiologicalTicks -= HourTickInterval * AgeMultiplier;
     }
 
-    public override void Notify_PawnDied()
+    public override void Notify_PawnDied(DamageInfo? dinfo, Hediff culprit = null)
     {
         if (_resurrectionCharges > 0)
         {
@@ -255,7 +255,7 @@ public class HediffComp_Regeneration : HediffComp
             }
         }
 
-        base.Notify_PawnDied();
+        base.Notify_PawnDied(dinfo, culprit);
     }
 
     private void SpendResurrectorCharge()

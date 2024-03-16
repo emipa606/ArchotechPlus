@@ -9,8 +9,7 @@ public static class Main
 {
     static Main()
     {
-        var harmony = new Harmony("Mlie.ArchotechPlus");
-        harmony.PatchAll(Assembly.GetExecutingAssembly());
+        new Harmony("Mlie.ArchotechPlus").PatchAll(Assembly.GetExecutingAssembly());
         Log.Message("[ArchotechPlus] Patched Hediff applyer");
     }
 }

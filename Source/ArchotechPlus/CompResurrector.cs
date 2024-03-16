@@ -39,7 +39,7 @@ public class CompResurrector : ThingComp
         if (ResurrectionConditionsMet() && CorpseRemovedFromContainers())
         {
             MessageWasResurrectionSuccessful(true);
-            ResurrectionUtility.ResurrectWithSideEffects(Corpse.InnerPawn);
+            ResurrectionUtility.TryResurrectWithSideEffects(Corpse.InnerPawn);
         }
 
         parent.Destroy();
