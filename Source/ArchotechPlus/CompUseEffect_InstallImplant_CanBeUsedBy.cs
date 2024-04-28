@@ -42,7 +42,7 @@ public static class CompUseEffect_InstallImplant_CanBeUsedBy
             __result = false;
             return false;
         }
-            
+
         // Upgrade
         switch (existingImplant)
         {

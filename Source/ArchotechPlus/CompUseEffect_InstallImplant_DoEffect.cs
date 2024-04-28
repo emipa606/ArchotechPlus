@@ -35,7 +35,7 @@ public static class CompUseEffect_InstallImplant_DoEffect
         {
             return false;
         }
-        
+
         // Upgrade
         switch (firstHediffOfDef)
         {

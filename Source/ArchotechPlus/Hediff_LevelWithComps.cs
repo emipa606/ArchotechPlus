@@ -4,7 +4,7 @@ using Verse;
 namespace ArchotechPlus;
 
 /// <summary>
-/// No longer needed, but included for compatibility’s sake
+///     No longer needed, but included for compatibility’s sake
 /// </summary>
 public class Hediff_LevelWithComps : HediffWithComps
 {
