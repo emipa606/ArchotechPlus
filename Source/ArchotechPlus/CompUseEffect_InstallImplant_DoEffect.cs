@@ -31,11 +31,25 @@ public static class CompUseEffect_InstallImplant_DoEffect
             return false;
         }
 
-        if (__instance.Props.canUpgrade)
+        if (!__instance.Props.canUpgrade)
         {
-            ((Hediff_LevelWithComps)firstHediffOfDef).ChangeLevel(1);
+            return false;
         }
-
-        return false;
+        
+        // Upgrade
+        switch (firstHediffOfDef)
+        {
+            // Old hack for previous versions (This is not needed in 1.5+)
+            case Hediff_LevelWithComps compatibility:
+                compatibility.ChangeLevel(1);
+                return false;
+            // New level version
+            case Hediff_Level hediffLevel:
+                hediffLevel.ChangeLevel(1);
+                return false;
+            // No existing implant
+            default:
+                return false;
+        }
     }
 }

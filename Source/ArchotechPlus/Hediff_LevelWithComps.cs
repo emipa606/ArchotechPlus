@@ -3,6 +3,9 @@ using Verse;
 
 namespace ArchotechPlus;
 
+/// <summary>
+/// No longer needed, but included for compatibility’s sake
+/// </summary>
 public class Hediff_LevelWithComps : HediffWithComps
 {
     public int level = 1;
