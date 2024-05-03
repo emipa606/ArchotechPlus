@@ -41,7 +41,7 @@
   </ThingDef>
   <HediffDef ParentName="ImplantHediffBase">
     <defName>ArchotechRegenerator</defName>
-    <hediffClass>ArchotechPlus.Hediff_LevelWithComps</hediffClass>
+    <hediffClass>Hediff_Level</hediffClass>
     <descriptionHyperlinks>
       <ThingDef>ArchotechRegenerator</ThingDef>
     </descriptionHyperlinks>

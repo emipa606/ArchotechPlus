@@ -33,7 +33,7 @@ public static class CompUseEffect_InstallImplant_CanBeUsedBy
         var existingImplant = __instance.GetExistingImplant(p);
         if (existingImplant == null)
         {
-            __result = false;
+            __result = true;
             return false;
         }
 
