@@ -4,7 +4,7 @@ using Verse;
 
 namespace ArchotechPlus;
 
-[HarmonyPatch(typeof(CompUseEffect_InstallImplant), "DoEffect")]
+[HarmonyPatch(typeof(CompUseEffect_InstallImplant), nameof(CompUseEffect_InstallImplant.DoEffect))]
 public static class CompUseEffect_InstallImplant_DoEffect
 {
     /// <summary>

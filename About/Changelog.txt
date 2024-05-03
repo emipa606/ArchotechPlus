@@ -1,5 +1,8 @@
 # Changelog for Archotech+
 
+1.5.2 - Fixed the missing xml-changes, via HugKitten
+
+
 1.5.1 - Fixed the hediff to be levelbased, thanks to Kitty
 
 

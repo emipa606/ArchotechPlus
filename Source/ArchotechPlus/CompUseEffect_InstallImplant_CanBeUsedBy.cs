@@ -4,7 +4,7 @@ using Verse;
 
 namespace ArchotechPlus;
 
-[HarmonyPatch(typeof(CompUseEffect_InstallImplant), "CanBeUsedBy")]
+[HarmonyPatch(typeof(CompUseEffect_InstallImplant), nameof(CompUseEffect_InstallImplant.CanBeUsedBy))]
 public static class CompUseEffect_InstallImplant_CanBeUsedBy
 {
     /// <summary>
