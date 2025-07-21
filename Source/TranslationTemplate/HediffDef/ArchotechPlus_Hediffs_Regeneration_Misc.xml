@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  <!-- EN: Regenerating -->
+  <RegenerationProgress.label>Regenerating</RegenerationProgress.label>
+  <!-- EN: Archotech mechanites are restoring this non-functional bodypart. -->
+  <RegenerationProgress.description>Archotech mechanites are restoring this non-functional bodypart.</RegenerationProgress.description>
+  <!-- EN: finalizing regeneration -->
+  <RegenerationProgress.stages.finalizing_regeneration.label>finalizing regeneration</RegenerationProgress.stages.finalizing_regeneration.label>
+  <!-- EN: regenerating musculature -->
+  <RegenerationProgress.stages.regenerating_musculature.label>regenerating musculature</RegenerationProgress.stages.regenerating_musculature.label>
+  <!-- EN: establishing neural connections -->
+  <RegenerationProgress.stages.establishing_neural_connections.label>establishing neural connections</RegenerationProgress.stages.establishing_neural_connections.label>
+  <!-- EN: reconnecting blood flow -->
+  <RegenerationProgress.stages.reconnecting_blood_flow.label>reconnecting blood flow</RegenerationProgress.stages.reconnecting_blood_flow.label>
+  <!-- EN: generating cellular scaffold -->
+  <RegenerationProgress.stages.generating_cellular_scaffold.label>generating cellular scaffold</RegenerationProgress.stages.generating_cellular_scaffold.label>
+  <!-- EN: resurrection shock -->
+  <ResurrectionProgress.label>resurrection shock</ResurrectionProgress.label>
+  <!-- EN: The body takes time and ample energy to recover after being abruptly reawakened from the void. -->
+  <ResurrectionProgress.description>The body takes time and ample energy to recover after being abruptly reawakened from the void.</ResurrectionProgress.description>
+  <!-- EN: deconstructing resurrector mechanites -->
+  <ResurrectionProgress.stages.deconstructing_resurrector_mechanites.label>deconstructing resurrector mechanites</ResurrectionProgress.stages.deconstructing_resurrector_mechanites.label>
+  <!-- EN: reestablishing nerves -->
+  <ResurrectionProgress.stages.reestablishing_nerves.label>reestablishing nerves</ResurrectionProgress.stages.reestablishing_nerves.label>
+  <!-- EN: rebuilding muscles -->
+  <ResurrectionProgress.stages.rebuilding_muscles.label>rebuilding muscles</ResurrectionProgress.stages.rebuilding_muscles.label>
+  <!-- EN: revitalizing dessicated tissue -->
+  <ResurrectionProgress.stages.revitalizing_dessicated_tissue.label>revitalizing dessicated tissue</ResurrectionProgress.stages.revitalizing_dessicated_tissue.label>
+</LanguageData>

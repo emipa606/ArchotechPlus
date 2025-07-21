@@ -10,6 +10,5 @@ public static class Main
     static Main()
     {
         new Harmony("Mlie.ArchotechPlus").PatchAll(Assembly.GetExecutingAssembly());
-        Log.Message("[ArchotechPlus] Patched Hediff applyer");
     }
 }

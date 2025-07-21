@@ -10,7 +10,6 @@ public static class CompUseEffect_InstallImplant_CanBeUsedBy
     /// <summary>
     ///     This is the best place for games with the run in background is turned on.
     /// </summary>
-    [HarmonyPrefix]
     public static bool Prefix(ref Pawn p, CompUseEffect_InstallImplant __instance, ref AcceptanceReport __result)
     {
         if (__instance.Props.hediffDef.defName != "ArchotechRegenerator")
@@ -18,13 +17,8 @@ public static class CompUseEffect_InstallImplant_CanBeUsedBy
             return true;
         }
 
-        if ((!p.IsFreeColonist || p.HasExtraHomeFaction()) && !__instance.Props.allowNonColonists)
-        {
-            __result = false;
-            return false;
-        }
-
-        if (p.RaceProps.body.GetPartsWithDef(__instance.Props.bodyPart).FirstOrFallback() == null)
+        if ((!p.IsFreeColonist || p.HasExtraHomeFaction()) && !__instance.Props.allowNonColonists ||
+            p.RaceProps.body.GetPartsWithDef(__instance.Props.bodyPart).FirstOrFallback() == null)
         {
             __result = false;
             return false;

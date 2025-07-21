@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  <!-- EN: archotech bioadapter -->
+  <ArchotechBioadapter.label>archotech bioadapter</ArchotechBioadapter.label>
+  <!-- EN: An installed archotech bioadapter \n\nEffects \n\nLevel 1: 15C (27F) wider comfortable temperature range, 10% faster immunity gain, 50% resistance to toxic fallout. \n\nLevel 2: 25C (45F) wider comfortable temperature range, 20% faster immunity gain, 100% resistance to toxic fallout. -->
+  <ArchotechBioadapter.description>An installed archotech bioadapter 
+
+Effects 
+
+Level 1: 15C (27F) wider comfortable temperature range, 10% faster immunity gain, 50% resistance to toxic fallout. 
+
+Level 2: 25C (45F) wider comfortable temperature range, 20% faster immunity gain, 100% resistance to toxic fallout.</ArchotechBioadapter.description>
+  <!-- EN: an archotech bioadapter -->
+  <ArchotechBioadapter.labelNoun>an archotech bioadapter</ArchotechBioadapter.labelNoun>
+  <!-- EN: archotech cortex -->
+  <ArchotechCortex.label>archotech cortex</ArchotechCortex.label>
+  <!-- EN: An installed archotech cortex. \n\nEffects \n\nLevel 1: 25% faster learning, 25% faster research, +10% medical tend/surgery quality, -5% mental break threshold, 5% increased pain shock threshold. \n\nLevel 2: 50% faster learning, 50% faster research, +20% medical tend/surgery quality, -10% mental break threshold, 10% increased pain shock threshold. -->
+  <ArchotechCortex.description>An installed archotech cortex. 
+
+Effects 
+
+Level 1: 25% faster learning, 25% faster research, +10% medical tend/surgery quality, -5% mental break threshold, 5% increased pain shock threshold. 
+
+Level 2: 50% faster learning, 50% faster research, +20% medical tend/surgery quality, -10% mental break threshold, 10% increased pain shock threshold.</ArchotechCortex.description>
+  <!-- EN: an archotech cortex -->
+  <ArchotechCortex.labelNoun>an archotech cortex</ArchotechCortex.labelNoun>
+  <!-- EN: archotech regenerator -->
+  <ArchotechRegenerator.label>archotech regenerator</ArchotechRegenerator.label>
+  <!-- EN: An installed archotech regenerator. \n\nEffects \n\nLevel 1: +75% Healing Rate, Pawn will reverse-age 10 years per year to target age. \n\nLevel 2: All previous capabilities. The implant will generate charges and use them to regenerate parts or heal chronic conditions. Charges may be seen by hovering over the regenerator in the health menu. The number of charges and the charge rate may be set to your preference in the mod options. \n\nLevel 3: All previous capabilities. Additionally, the implant will generate a resurrection mist upon death if the implant is charged, which will attempt to resurrect the pawn after the time set in your mod-settings. The pawn must have a body with a head to be resurrected. -->
+  <ArchotechRegenerator.description>An installed archotech regenerator. 
+
+Effects 
+
+Level 1: +75% Healing Rate, Pawn will reverse-age 10 years per year to target age. 
+
+Level 2: All previous capabilities. The implant will generate charges and use them to regenerate parts or heal chronic conditions. Charges may be seen by hovering over the regenerator in the health menu. The number of charges and the charge rate may be set to your preference in the mod options. 
+
+Level 3: All previous capabilities. Additionally, the implant will generate a resurrection mist upon death if the implant is charged, which will attempt to resurrect the pawn after the time set in your mod-settings. The pawn must have a body with a head to be resurrected.</ArchotechRegenerator.description>
+  <!-- EN: an archotech regenerator -->
+  <ArchotechRegenerator.labelNoun>an archotech regenerator</ArchotechRegenerator.labelNoun>
+  <!-- EN: archotech subdermal armor -->
+  <ArchotechSubdermalArmor.label>archotech subdermal armor</ArchotechSubdermalArmor.label>
+  <!-- EN: Installed archotech subdermal armor. \n\nEffects \n\nLevel 1: Improved armor rating for the pawn's skin, comparable to an additional leather layer. Reduced bleeding from injuries by 20%. \n\nLevel 2: Improved armor rating for the pawn's skin, comparable to an additional synthread layer. Reduced bleeding from injuries by 40%. Damage received is reduced by 10%. \n\nLevel 3: Improved armor rating for the pawn's skin, comparable to an additional devilstrand layer. Reduced bleeding from injuries by 60%. Damage received is reduced by 25%. -->
+  <ArchotechSubdermalArmor.description>Installed archotech subdermal armor. 
+
+Effects 
+
+Level 1: Improved armor rating for the pawn's skin, comparable to an additional leather layer. Reduced bleeding from injuries by 20%. 
+
+Level 2: Improved armor rating for the pawn's skin, comparable to an additional synthread layer. Reduced bleeding from injuries by 40%. Damage received is reduced by 10%. 
+
+Level 3: Improved armor rating for the pawn's skin, comparable to an additional devilstrand layer. Reduced bleeding from injuries by 60%. Damage received is reduced by 25%.</ArchotechSubdermalArmor.description>
+  <!-- EN: archotech subdermal armor -->
+  <ArchotechSubdermalArmor.labelNoun>archotech subdermal armor</ArchotechSubdermalArmor.labelNoun>
+</LanguageData>

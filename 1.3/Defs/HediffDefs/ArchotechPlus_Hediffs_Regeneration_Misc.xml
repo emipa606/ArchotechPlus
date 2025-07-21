@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Defs>
   <!-- Regeneration Progression Hediff for when a limb or organ is regenerated. -->
   <HediffDef ParentName="DiseaseBase">

@@ -2,5 +2,14 @@
   "Continued": true,
   "CanAdd": "0",
   "CanRemove": "2",
-  "PreviewVersion": "1.5"
+  "PreviewVersion": "1.6",
+  "Patches": false,
+  "Defs": true,
+  "Assemblies": true,
+  "LinesOfCode": 25439,
+  "LinesOfXML": 22172,
+  "CodeBaseSize": 74,
+  "LastXmlCleaning": "2025-07-21T22:23:35.8894819+02:00",
+  "SocialImageSet": true,
+  "SearchTags": " power balance"
 }

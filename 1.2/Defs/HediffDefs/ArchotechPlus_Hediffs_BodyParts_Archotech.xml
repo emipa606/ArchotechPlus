@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Defs>
   <!-- Surgery Base for Installing implants without medicine.-->
   <RecipeDef Name="SurgeryInstallArchotechImplantBase" ParentName="SurgeryFlesh" Abstract="True">

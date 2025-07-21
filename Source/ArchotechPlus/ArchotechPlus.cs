@@ -8,27 +8,29 @@ namespace ArchotechPlus;
 public class ArchotechPlus : Mod
 {
     private static string currentVersion;
-    private readonly ArchotechPlusSettings _settings;
+    public static ArchotechPlus Instance;
+    public readonly ArchotechPlusSettings Settings;
 
     public ArchotechPlus(ModContentPack content) : base(content)
     {
-        _settings = GetSettings<ArchotechPlusSettings>();
+        Instance = this;
+        Settings = GetSettings<ArchotechPlusSettings>();
         currentVersion =
             VersionFromManifest.GetVersionFromModMetaData(content.ModMetaData);
     }
 
     public override void DoSettingsWindowContents(Rect inRect)
     {
-        var targetAgeBuffer = ArchotechPlusSettings.TargetAge.ToString();
-        var healingChargesBuffer = ArchotechPlusSettings.MaxHealingCharges.ToString();
-        var resurrectorChargesBuffer = ArchotechPlusSettings.MaxResurrectionCharges.ToString();
+        var targetAgeBuffer = Settings.TargetAge.ToString();
+        var healingChargesBuffer = Settings.MaxHealingCharges.ToString();
+        var resurrectorChargesBuffer = Settings.MaxResurrectionCharges.ToString();
 
         var listingStandard = new Listing_Standard(GameFont.Small) { ColumnWidth = inRect.width / 3f };
         listingStandard.Begin(inRect);
-        listingStandard.CheckboxLabeled("ArchotechPlusDeAge".Translate(), ref ArchotechPlusSettings.RegeneratorDeAge,
+        listingStandard.CheckboxLabeled("ArchotechPlusDeAge".Translate(), ref Settings.RegeneratorDeAge,
             "ArchotechPlusDeAgeTooltip".Translate());
 
-        if (ArchotechPlusSettings.RegeneratorDeAge)
+        if (Settings.RegeneratorDeAge)
         {
             listingStandard.Label("ArchotechPlusAge".Translate(), -1,
                 "ArchotechPlusAgeTooltip".Translate());
@@ -41,9 +43,9 @@ public class ArchotechPlus : Mod
             "ArchotechPlusHealingTimeTooltip".Translate());
         listingStandard.Gap();
         listingStandard.CheckboxLabeled("ArchotechPlusRegenerator".Translate(),
-            ref ArchotechPlusSettings.RegeneratorResurrects,
+            ref Settings.RegeneratorResurrects,
             "ArchotechPlusRegeneratorTooltip".Translate());
-        if (ArchotechPlusSettings.RegeneratorResurrects)
+        if (Settings.RegeneratorResurrects)
         {
             listingStandard.Label("ArchotechPlusRessurectCharges".Translate(), -1,
                 "ArchotechPlusRessurectChargesTooltip".Translate());
@@ -54,20 +56,20 @@ public class ArchotechPlus : Mod
 
         listingStandard.NewColumn();
         listingStandard.Gap(Text.LineHeight + 3f);
-        if (ArchotechPlusSettings.RegeneratorDeAge)
+        if (Settings.RegeneratorDeAge)
         {
-            listingStandard.IntEntry(ref ArchotechPlusSettings.TargetAge, ref targetAgeBuffer);
+            listingStandard.IntEntry(ref Settings.TargetAge, ref targetAgeBuffer);
         }
 
-        listingStandard.IntEntry(ref ArchotechPlusSettings.MaxHealingCharges, ref healingChargesBuffer);
-        listingStandard.IntRange(ref ArchotechPlusSettings.HealingRange, 1, 360);
+        listingStandard.IntEntry(ref Settings.MaxHealingCharges, ref healingChargesBuffer);
+        listingStandard.IntRange(ref Settings.HealingRange, 1, 360);
         listingStandard.Gap();
-        if (ArchotechPlusSettings.RegeneratorResurrects)
+        if (Settings.RegeneratorResurrects)
         {
             listingStandard.Gap(Text.LineHeight + 3f);
-            listingStandard.IntEntry(ref ArchotechPlusSettings.MaxResurrectionCharges,
+            listingStandard.IntEntry(ref Settings.MaxResurrectionCharges,
                 ref resurrectorChargesBuffer);
-            listingStandard.IntRange(ref ArchotechPlusSettings.ResurrectionRange, 1, 360);
+            listingStandard.IntRange(ref Settings.ResurrectionRange, 1, 360);
         }
         else
         {
@@ -85,26 +87,17 @@ public class ArchotechPlus : Mod
         listingStandard.NewColumn();
         listingStandard.Gap(Text.LineHeight * 2.75f);
         listingStandard.Label(
-            $"{(ArchotechPlusSettings.HealingRange.min * 2500).ToStringTicksToPeriod()} - {(ArchotechPlusSettings.HealingRange.max * 2500).ToStringTicksToPeriod()}");
+            $"{(Settings.HealingRange.min * 2500).ToStringTicksToPeriod()} - {(Settings.HealingRange.max * 2500).ToStringTicksToPeriod()}");
 
-        if (ArchotechPlusSettings.RegeneratorResurrects)
+        if (Settings.RegeneratorResurrects)
         {
             listingStandard.Gap(Text.LineHeight * 3.25f);
             listingStandard.Label(
-                $"{(ArchotechPlusSettings.ResurrectionRange.min * 2500).ToStringTicksToPeriod()} - {(ArchotechPlusSettings.ResurrectionRange.max * 2500).ToStringTicksToPeriod()}");
+                $"{(Settings.ResurrectionRange.min * 2500).ToStringTicksToPeriod()} - {(Settings.ResurrectionRange.max * 2500).ToStringTicksToPeriod()}");
         }
 
         listingStandard.End();
         base.DoSettingsWindowContents(inRect);
-    }
-
-    public override void WriteSettings()
-    {
-        Log.Message($"[Archotech+] Regenerator Target Age: {ArchotechPlusSettings.TargetAge}");
-        Log.Message($"[Archotech+] Maximum Healing Charges: {ArchotechPlusSettings.MaxHealingCharges} charges");
-        Log.Message(
-            $"[Archotech+] Regenerator Resurrection is enabled with {ArchotechPlusSettings.MaxResurrectionCharges} maximum charges");
-        base.WriteSettings();
     }
 
     public override string SettingsCategory()

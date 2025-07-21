@@ -4,13 +4,13 @@ namespace ArchotechPlus;
 
 public class ArchotechPlusSettings : ModSettings
 {
-    public static bool RegeneratorDeAge = true;
-    public static int TargetAge = 30;
-    public static int MaxHealingCharges = 1;
-    public static bool RegeneratorResurrects = true;
-    public static int MaxResurrectionCharges = 1;
-    public static IntRange HealingRange = new IntRange(120, 240);
-    public static IntRange ResurrectionRange = new IntRange(12, 96);
+    public IntRange HealingRange = new(120, 240);
+    public int MaxHealingCharges = 1;
+    public int MaxResurrectionCharges = 1;
+    public bool RegeneratorDeAge = true;
+    public bool RegeneratorResurrects = true;
+    public IntRange ResurrectionRange = new(12, 96);
+    public int TargetAge = 30;
 
     public override void ExposeData()
     {

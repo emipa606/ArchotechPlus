@@ -10,7 +10,6 @@ public static class CompUseEffect_InstallImplant_DoEffect
     /// <summary>
     ///     This is the best place for games with the run in background is turned on.
     /// </summary>
-    [HarmonyPrefix]
     public static bool Prefix(ref Pawn user, CompUseEffect_InstallImplant __instance)
     {
         if (__instance.Props.hediffDef.defName != "ArchotechRegenerator")

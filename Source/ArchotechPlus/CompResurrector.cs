@@ -8,14 +8,14 @@ public class CompResurrector : ThingComp
 {
     private const int TicksPerHour = 2500;
 
-    private IntRange _resurrectionRange = ArchotechPlusSettings.ResurrectionRange;
+    private IntRange _resurrectionRange = ArchotechPlus.Instance.Settings.ResurrectionRange;
 
     private int _ticksToResurrection;
     public Corpse Corpse;
 
     public CompProperties_Resurrector Props => (CompProperties_Resurrector)props;
 
-    public bool CorpseIsInContainer => Corpse.StoringThing() != null;
+    private bool CorpseIsInContainer => Corpse.StoringThing() != null;
 
     public override void PostSpawnSetup(bool respawningAfterLoad)
     {
@@ -36,9 +36,9 @@ public class CompResurrector : ThingComp
             return;
         }
 
-        if (ResurrectionConditionsMet() && CorpseRemovedFromContainers())
+        if (resurrectionConditionsMet() && corpseRemovedFromContainers())
         {
-            MessageWasResurrectionSuccessful(true);
+            messageWasResurrectionSuccessful(true);
             ResurrectionUtility.TryResurrectWithSideEffects(Corpse.InnerPawn);
         }
 
@@ -52,7 +52,7 @@ public class CompResurrector : ThingComp
         base.PostExposeData();
     }
 
-    private bool CorpseRemovedFromContainers()
+    private bool corpseRemovedFromContainers()
     {
         if (CorpseIsInContainer && Corpse.StoringThing().GetType().IsSubclassOf(typeof(Building_Casket)))
         {
@@ -69,18 +69,18 @@ public class CompResurrector : ThingComp
         return false;
     }
 
-    private bool ResurrectionConditionsMet()
+    private bool resurrectionConditionsMet()
     {
         if (!Corpse.DestroyedOrNull() && Corpse.InnerPawn.health.hediffSet.HasHead)
         {
             return true;
         }
 
-        MessageWasResurrectionSuccessful(false);
+        messageWasResurrectionSuccessful(false);
         return false;
     }
 
-    private void MessageWasResurrectionSuccessful(bool successful)
+    private void messageWasResurrectionSuccessful(bool successful)
     {
         if (successful)
         {

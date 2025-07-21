@@ -13,32 +13,32 @@ public class HediffComp_Regeneration : HediffComp
 {
     private const int HourTickInterval = 2500;
     private const int AgeMultiplier = 10;
-    private static readonly int _maxHealingCharges = ArchotechPlusSettings.MaxHealingCharges;
+    private static readonly int _maxHealingCharges = ArchotechPlus.Instance.Settings.MaxHealingCharges;
     private static int _resurrectionCharges;
-    private static readonly int _maxResurrectionCharges = ArchotechPlusSettings.MaxResurrectionCharges;
+    private static readonly int _maxResurrectionCharges = ArchotechPlus.Instance.Settings.MaxResurrectionCharges;
 
     private static readonly HediffDef RegenProgress = DefDatabase<HediffDef>.GetNamed("RegenerationProgress");
 
-    private readonly bool _resurrectorEnabled = ArchotechPlusSettings.RegeneratorResurrects;
+    private readonly bool _resurrectorEnabled = ArchotechPlus.Instance.Settings.RegeneratorResurrects;
 
     private BodyPartRecord _bodyPartRegenerationTarget;
 
     private int _healingCharges;
 
-    private IntRange _healingCooldownRange = ArchotechPlusSettings.HealingRange;
+    private IntRange _healingCooldownRange = ArchotechPlus.Instance.Settings.HealingRange;
 
     private int _ticks;
     private int _ticksFullCharge;
     private Hediff _woundRegenerationTarget;
 
-    private static long TargetAgeInTicks => (ArchotechPlusSettings.TargetAge * 3600000L) + 1800000L;
+    private static long TargetAgeInTicks => (ArchotechPlus.Instance.Settings.TargetAge * 3600000L) + 1800000L;
     private float PercentageCharged => (float)_ticks / _ticksFullCharge;
 
-    public override string CompTipStringExtra => parent.Severity > 1 ? CompTipStringBuilder() : null;
+    public override string CompTipStringExtra => parent.Severity > 1 ? compTipStringBuilder() : null;
 
     public override void CompPostMake()
     {
-        ResetChargingTicks();
+        resetChargingTicks();
     }
 
     public override void CompPostTick(ref float severityAdjustment)
@@ -46,57 +46,57 @@ public class HediffComp_Regeneration : HediffComp
         _ticks++;
         if (_ticks > _ticksFullCharge)
         {
-            ChargeRegenerator();
-            ResetChargingTicks();
+            chargeRegenerator();
+            resetChargingTicks();
         }
 
         if (_ticks % HourTickInterval == 0)
         {
-            LongTick();
+            longTick();
         }
     }
 
-    private void LongTick()
+    private void longTick()
     {
-        if (IsPawnInjured() && UsableHealingCharge())
+        if (isPawnInjured() && usableHealingCharge())
         {
-            if (TryRestoreMissingPart() || TryHealRandomPermanentWound())
+            if (tryRestoreMissingPart() || tryHealRandomPermanentWound())
             {
                 _ticks = 0;
-                IsPawnInjured();
+                isPawnInjured();
                 return;
             }
         }
 
-        if (ArchotechPlusSettings.RegeneratorDeAge)
+        if (ArchotechPlus.Instance.Settings.RegeneratorDeAge)
         {
-            ReduceAge();
+            reduceAge();
         }
     }
 
-    private void ChargeRegenerator()
+    private void chargeRegenerator()
     {
-        if (ResurrectorCanCharge())
+        if (resurrectorCanCharge())
         {
             _resurrectionCharges++;
         }
-        else if (HealerCanCharge())
+        else if (healerCanCharge())
         {
             _healingCharges++;
         }
     }
 
-    private bool ResurrectorCanCharge()
+    private bool resurrectorCanCharge()
     {
         return parent.Severity > 2 && _resurrectorEnabled && _resurrectionCharges < _maxResurrectionCharges;
     }
 
-    private bool HealerCanCharge()
+    private bool healerCanCharge()
     {
         return parent.Severity > 1 && _healingCharges < _maxHealingCharges;
     }
 
-    private bool UsableHealingCharge()
+    private bool usableHealingCharge()
     {
         if (_healingCharges <= 0)
         {
@@ -123,7 +123,7 @@ public class HediffComp_Regeneration : HediffComp
             yield break;
         }
 
-        if (HealerCanCharge())
+        if (healerCanCharge())
         {
             yield return new Command_Action
             {
@@ -134,7 +134,7 @@ public class HediffComp_Regeneration : HediffComp
             };
         }
 
-        if (ResurrectorCanCharge())
+        if (resurrectorCanCharge())
         {
             yield return new Command_Action
             {
@@ -146,24 +146,24 @@ public class HediffComp_Regeneration : HediffComp
         }
     }
 
-    private void ResetChargingTicks()
+    private void resetChargingTicks()
     {
         _ticks = 0;
         _ticksFullCharge = _healingCooldownRange.RandomInRange * HourTickInterval;
     }
 
-    private bool IsPawnInjured()
+    private bool isPawnInjured()
     {
-        _bodyPartRegenerationTarget = FindBiggestMissingBodyPart();
-        _woundRegenerationTarget = FindRandomPermanentWound();
+        _bodyPartRegenerationTarget = findBiggestMissingBodyPart();
+        _woundRegenerationTarget = findRandomPermanentWound();
         return _bodyPartRegenerationTarget != null || _woundRegenerationTarget != null;
     }
 
-    private BodyPartRecord FindBiggestMissingBodyPart(float minCoverage = 0.0f)
+    private BodyPartRecord findBiggestMissingBodyPart(float minCoverage = 0.0f)
     {
         BodyPartRecord bodyPartRecord = null;
-        foreach (var partsCommonAncestor in Pawn.health.hediffSet.GetMissingPartsCommonAncestors().Where(
-                     partsCommonAncestor =>
+        foreach (var partsCommonAncestor in Pawn.health.hediffSet.GetMissingPartsCommonAncestors()
+                     .Where(partsCommonAncestor =>
                          partsCommonAncestor.Part.coverageAbsWithChildren >= (double)minCoverage &&
                          !Pawn.health.hediffSet.PartOrAnyAncestorHasDirectlyAddedParts(partsCommonAncestor.Part) &&
                          (bodyPartRecord == null || partsCommonAncestor.Part.coverageAbsWithChildren >
@@ -175,7 +175,7 @@ public class HediffComp_Regeneration : HediffComp
         return bodyPartRecord;
     }
 
-    private Hediff FindRandomPermanentWound()
+    private Hediff findRandomPermanentWound()
     {
         return !Pawn.health.hediffSet.hediffs.Where(hd =>
                 hd.def == HediffDefOf.ResurrectionPsychosis || hd.IsPermanent() || hd.def.chronic)
@@ -184,7 +184,7 @@ public class HediffComp_Regeneration : HediffComp
             : result;
     }
 
-    private bool TryRestoreMissingPart()
+    private bool tryRestoreMissingPart()
     {
         if (_bodyPartRegenerationTarget == null)
         {
@@ -206,7 +206,7 @@ public class HediffComp_Regeneration : HediffComp
         return true;
     }
 
-    private bool TryHealRandomPermanentWound()
+    private bool tryHealRandomPermanentWound()
     {
         if (_woundRegenerationTarget == null)
         {
@@ -226,7 +226,7 @@ public class HediffComp_Regeneration : HediffComp
         return true;
     }
 
-    private void ReduceAge()
+    private void reduceAge()
     {
         if (Pawn.ageTracker.AgeBiologicalTicks < TargetAgeInTicks)
         {
@@ -240,8 +240,8 @@ public class HediffComp_Regeneration : HediffComp
     {
         if (_resurrectionCharges > 0)
         {
-            SpendResurrectorCharge();
-            CreateResurrector();
+            spendResurrectorCharge();
+            createResurrector();
         }
         else
         {
@@ -258,7 +258,7 @@ public class HediffComp_Regeneration : HediffComp
         base.Notify_PawnDied(dinfo, culprit);
     }
 
-    private void SpendResurrectorCharge()
+    private void spendResurrectorCharge()
     {
         --_resurrectionCharges;
         _ticks = 0;
@@ -274,7 +274,7 @@ public class HediffComp_Regeneration : HediffComp
                 Pawn.Named("PAWN")), Pawn, MessageTypeDefOf.PositiveEvent);
     }
 
-    private void CreateResurrector()
+    private void createResurrector()
     {
         var resurrectionTracker = (ThingWithComps)GenSpawn.Spawn(ThingDef.Named("ResurrectorTracker"),
             Pawn.Corpse.Position, Pawn.Corpse.Map);
@@ -292,10 +292,11 @@ public class HediffComp_Regeneration : HediffComp
 
     public override string CompDebugString()
     {
-        return $"Ticks: {_ticks}\nTicksToFullCharge{_ticksFullCharge}\nTargetAge: {ArchotechPlusSettings.TargetAge}";
+        return
+            $"Ticks: {_ticks}\nTicksToFullCharge{_ticksFullCharge}\nTargetAge: {ArchotechPlus.Instance.Settings.TargetAge}";
     }
 
-    private string CompTipStringBuilder()
+    private string compTipStringBuilder()
     {
         var tipBuilder = new StringBuilder();
         if (parent.Severity > 2 && _resurrectorEnabled)
@@ -316,7 +317,7 @@ public class HediffComp_Regeneration : HediffComp
                 $"Injury targeted: {_woundRegenerationTarget.LabelCap}({_woundRegenerationTarget.Part.LabelCap})");
         }
 
-        if (ResurrectorCanCharge() || HealerCanCharge())
+        if (resurrectorCanCharge() || healerCanCharge())
         {
             tipBuilder.Append($"{PercentageCharged.ToStringPercent()} charged");
         }
