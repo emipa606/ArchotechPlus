@@ -55,6 +55,7 @@
     <initialSeverity>1</initialSeverity>
     <minSeverity>0</minSeverity>
     <maxSeverity>3</maxSeverity>
+    <levelIsQuantity>true</levelIsQuantity>
     <stages>
       <li>
         <minSeverity>1</minSeverity>
@@ -104,6 +105,7 @@
     <initialSeverity>1</initialSeverity>
     <minSeverity>0</minSeverity>
     <maxSeverity>3</maxSeverity>
+    <levelIsQuantity>true</levelIsQuantity>
     <stages>
       <li>
         <minSeverity>1</minSeverity>
@@ -174,6 +176,7 @@
     <initialSeverity>1</initialSeverity>
     <minSeverity>0</minSeverity>
     <maxSeverity>2</maxSeverity>
+    <levelIsQuantity>true</levelIsQuantity>
     <stages>
       <li>
         <minSeverity>1</minSeverity>
@@ -235,6 +238,7 @@
     <initialSeverity>1</initialSeverity>
     <minSeverity>0</minSeverity>
     <maxSeverity>2</maxSeverity>
+    <levelIsQuantity>true</levelIsQuantity>
     <stages>
       <li>
         <minSeverity>1</minSeverity>
