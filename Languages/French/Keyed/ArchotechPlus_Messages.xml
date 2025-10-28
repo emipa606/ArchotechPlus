@@ -27,4 +27,7 @@
   <ArchotechPlusFillRegenTT>Régler les charges de régénération au maximum</ArchotechPlusFillRegenTT>
   <ArchotechPlusFillRessurect>DEBUG : Max Ressurect-charges</ArchotechPlusFillRessurect>
   <ArchotechPlusFillRessurectTT>Régler les charges de pression au maximum</ArchotechPlusFillRessurectTT>
+  <!--Used by the Regenerator-->
+  <!--Messages pertaining to Resurrection Charges-->
+  <!--Used by the Resurrection Mist-->
 </LanguageData>

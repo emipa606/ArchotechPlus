@@ -1,6 +1,6 @@
 # [Archotech+ (Continued)](https://steamcommunity.com/sharedfiles/filedetails/?id=2270493883)
 
-![Image](https://i.imgur.com/buuPQel.png)
+![Image](https://i.postimg.cc/1X4HT06h/Info.png)
 
 Update of Biscuits mod
 https://steamcommunity.com/sharedfiles/filedetails/?id=2010967585
@@ -10,9 +10,9 @@ https://steamcommunity.com/sharedfiles/filedetails/?id=2010967585
 
 For more functionality, try the revamped [Archotech++](https://steamcommunity.com/sharedfiles/filedetails/?id=2496279558) by Mezz
 
-![Image](https://i.imgur.com/pufA0kM.png)
+![Image](https://i.postimg.cc/8csH3dWV/Notice.png)
 	
-![Image](https://i.imgur.com/Z4GOv8H.png)
+![Image](https://i.postimg.cc/hvhrw8xB/Original-Description.png)
 
 *Update*: I am no longer working on this mod due to the rest of my life requiring more time. That said, anyone is welcome to add or remove whatever they should like from it and re-upload it to maintain it or expand on it in the future. As far as I'm concerned this belongs to the Rimworld community :)
 
@@ -27,13 +27,13 @@ All implants included can be self-installed by a pawn with zero chance of failur
 
 **Additional Implants, Revamped **
 
-![Image](https://i.imgur.com/v9FDOuL.png)
+![Image](https://i.postimg.cc/63Bc4m8f/v9FDOuL.png)
 
-![Image](https://i.imgur.com/UxZOTbT.png)
+![Image](https://i.postimg.cc/YS689HCk/UxZOTbT.png)
 
-![Image](https://i.imgur.com/ikWMnzq.png)
+![Image](https://i.postimg.cc/Dyc2qWpJ/ikWMnzq.png)
 
-![Image](https://i.imgur.com/B3cUu8f.png)
+![Image](https://i.postimg.cc/ZYMnWvgt/B3cUu8f.png)
 
 **Known Issues**
 
@@ -62,13 +62,13 @@ A Green/Blue mist will hover over the body and also all the plants will die in a
 *Can I bury a pawn that hasn't regenerated yet?*
 Yes. The pawn will burst out of the grave like the kool-aid man when they get resurrected.
 
-![Image](https://i.imgur.com/PwoNOj4.png)
+![Image](https://i.postimg.cc/x8qR7GH9/Reporting-Issues.png)
 
 
 
 -  See if the the error persists if you just have this mod and its requirements active.
 -  If not, try adding your other mods until it happens again.
--  Post your error-log using the [Log Uploader](https://steamcommunity.com/sharedfiles/filedetails/?id=2873415404) or the standalone [Uploader](https://steamcommunity.com/sharedfiles/filedetails/?id=2873415404) and command Ctrl+F12
+-  Always post your log using the [Log Uploader](https://steamcommunity.com/sharedfiles/filedetails/?id=2873415404)
 -  For best support, please use the Discord-channel for error-reporting.
 -  Do not report errors by making a discussion-thread, I get no notification of that.
 -  If you have the solution for a problem, please post it to the GitHub repository.

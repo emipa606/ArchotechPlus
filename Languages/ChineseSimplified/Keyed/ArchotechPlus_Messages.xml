@@ -27,4 +27,7 @@
   <ArchotechPlusFillRegenTT>将再生充电设置为最大值</ArchotechPlusFillRegenTT>
   <ArchotechPlusFillRessurect>DEBUG：最大恢复充能</ArchotechPlusFillRessurect>
   <ArchotechPlusFillRessurectTT>将再吸附装药量设为最大值</ArchotechPlusFillRessurectTT>
+  <!--Used by the Regenerator-->
+  <!--Messages pertaining to Resurrection Charges-->
+  <!--Used by the Resurrection Mist-->
 </LanguageData>

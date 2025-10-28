@@ -27,4 +27,7 @@
   <ArchotechPlusFillRegenTT>Установите максимальное значение заряда регенерации</ArchotechPlusFillRegenTT>
   <ArchotechPlusFillRessurect>DEBUG: Максимальное количество восстановительных зарядов</ArchotechPlusFillRessurect>
   <ArchotechPlusFillRessurectTT>Установите максимальное значение заряда повторного срабатывания</ArchotechPlusFillRessurectTT>
+  <!--Used by the Regenerator-->
+  <!--Messages pertaining to Resurrection Charges-->
+  <!--Used by the Resurrection Mist-->
 </LanguageData>
