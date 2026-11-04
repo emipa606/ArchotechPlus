@@ -1,6 +1,6 @@
 # [Archotech+ (Continued)](https://steamcommunity.com/sharedfiles/filedetails/?id=2270493883)
 
-![Image](https://i.postimg.cc/1X4HT06h/Info.png)
+![Image](https://img.litet.net/logos/Info.png)
 
 Update of Biscuits mod
 https://steamcommunity.com/sharedfiles/filedetails/?id=2010967585
@@ -10,9 +10,9 @@ https://steamcommunity.com/sharedfiles/filedetails/?id=2010967585
 
 For more functionality, try the revamped [Archotech++](https://steamcommunity.com/sharedfiles/filedetails/?id=2496279558) by Mezz
 
-![Image](https://i.postimg.cc/8csH3dWV/Notice.png)
+![Image](https://img.litet.net/logos/Notice.png)
 	
-![Image](https://i.postimg.cc/hvhrw8xB/Original-Description.png)
+![Image](https://img.litet.net/logos/OriginalDescription.png)
 
 *Update*: I am no longer working on this mod due to the rest of my life requiring more time. That said, anyone is welcome to add or remove whatever they should like from it and re-upload it to maintain it or expand on it in the future. As far as I'm concerned this belongs to the Rimworld community :)
 
@@ -27,13 +27,13 @@ All implants included can be self-installed by a pawn with zero chance of failur
 
 **Additional Implants, Revamped **
 
-![Image](https://i.postimg.cc/63Bc4m8f/v9FDOuL.png)
+![Image](https://img.litet.net/v9FDOuL.png)
 
-![Image](https://i.postimg.cc/YS689HCk/UxZOTbT.png)
+![Image](https://img.litet.net/UxZOTbT.png)
 
-![Image](https://i.postimg.cc/Dyc2qWpJ/ikWMnzq.png)
+![Image](https://img.litet.net/ikWMnzq.png)
 
-![Image](https://i.postimg.cc/ZYMnWvgt/B3cUu8f.png)
+![Image](https://img.litet.net/B3cUu8f.png)
 
 **Known Issues**
 
@@ -62,7 +62,7 @@ A Green/Blue mist will hover over the body and also all the plants will die in a
 *Can I bury a pawn that hasn't regenerated yet?*
 Yes. The pawn will burst out of the grave like the kool-aid man when they get resurrected.
 
-![Image](https://i.postimg.cc/x8qR7GH9/Reporting-Issues.png)
+![Image](https://img.litet.net/logos/ReportingIssues.png)
 
 
 
@@ -76,4 +76,4 @@ Yes. The pawn will burst out of the grave like the kool-aid man when they get re
 
  
 
-[![Image](https://img.shields.io/github/v/release/emipa606/ArchotechPlus?label=latest%20version&style=plastic&color=9f1111&labelColor=black)](https://steamcommunity.com/sharedfiles/filedetails/changelog/2270493883) | tags:  power balance
+[![Image](https://img.shields.io/github/v/release/emipa606/ArchotechPlus?label=latest%20version&style=plastic&color=9f1111&labelColor=black)](https://steamcommunity.com/sharedfiles/filedetails/changelog/2270493883) | power balance

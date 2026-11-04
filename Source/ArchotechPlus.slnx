@@ -6,4 +6,17 @@
     <BuildType Name="Release" />
   </Configurations>
   <Project Path="ArchotechPlus/ArchotechPlus.csproj" />
+  <Folder Name="/XML/About/">
+    <File Path="../About/about.xml" />
+  </Folder>
+  <Folder Name="/XML/Languages/English/Keyed/">
+    <File Path="../Languages/English/Keyed/ArchotechPlus_Messages.xml" />
+  </Folder>
+  <Folder Name="/XML/1.7/Defs/HediffDefs/">
+    <File Path="../1.7/Defs/HediffDefs/ArchotechPlus_Hediffs_BodyParts_Archotech.xml" />
+    <File Path="../1.7/Defs/HediffDefs/ArchotechPlus_Hediffs_Regeneration_Misc.xml" />
+  </Folder>
+  <Folder Name="/XML/1.7/Defs/ThingDefs_Misc/">
+    <File Path="../1.7/Defs/ThingDefs_Misc/ArchotechPlus_Ethereal_Trackers.xml" />
+  </Folder>
 </Solution>

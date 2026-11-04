@@ -7,11 +7,11 @@ namespace ArchotechPlus;
 public class CompResurrector : ThingComp
 {
     private const int TicksPerHour = 2500;
+    public Corpse Corpse;
 
     private IntRange _resurrectionRange = ArchotechPlus.Instance.Settings.ResurrectionRange;
 
     private int _ticksToResurrection;
-    public Corpse Corpse;
 
     public CompProperties_Resurrector Props => (CompProperties_Resurrector)props;
 

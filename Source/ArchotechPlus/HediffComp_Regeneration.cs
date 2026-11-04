@@ -58,14 +58,11 @@ public class HediffComp_Regeneration : HediffComp
 
     private void longTick()
     {
-        if (isPawnInjured() && usableHealingCharge())
+        if (isPawnInjured() && usableHealingCharge() && (tryRestoreMissingPart() || tryHealRandomPermanentWound()))
         {
-            if (tryRestoreMissingPart() || tryHealRandomPermanentWound())
-            {
-                _ticks = 0;
-                isPawnInjured();
-                return;
-            }
+            _ticks = 0;
+            isPawnInjured();
+            return;
         }
 
         if (ArchotechPlus.Instance.Settings.RegeneratorDeAge)
